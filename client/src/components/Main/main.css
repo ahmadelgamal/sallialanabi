@@ -52,3 +52,50 @@ h6 {
 p {
   font-size: 18px;
 }
+
+.hero-images img {
+  width: 100%;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  border: 5px solid var(--color-light-blue-d4);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
+  background-color: var(--color-blue-grey-l5);
+  display: block;
+  width: 100%;
+}
+
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid var(--color-blue-grey-d4);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 20px;
+}
+
+#contact-submit {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--color-light-blue-d4);
+  color: var(--color-blue-grey-l5);
+  font-size: 20px;
+  border: 1px solid var(--color-blue-grey-d4);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
