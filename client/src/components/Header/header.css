@@ -39,6 +39,7 @@
   height: 100vh;
   background-color: rgba(13, 71, 161, 0.8); /* var(--color-light-blue-d4); */
   transition: 500ms;
+  overflow: scroll;
 }
 
 .nav-menu.active {
