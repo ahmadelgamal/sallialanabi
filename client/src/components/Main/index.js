@@ -7,7 +7,7 @@ function Home() {
   
   return (
     <main className='home'>
-      <section className="container">
+      <section>
         <pre className="sulli">&#xFDFA;</pre>
         <h1 className="">Home</h1>
         <h2 className="">Welcome to Salli Ala Nabi</h2>

@@ -5,7 +5,7 @@ function Account() {
 
   return (
     <main className='account'>
-      <section className="container">
+      <section>
         <h1>Account</h1>
       </section>
     </main>

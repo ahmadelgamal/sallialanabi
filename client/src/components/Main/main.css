@@ -1,10 +1,6 @@
 main {
   background-color: var(--color-blue-grey-l5);
-  padding: 40px 0;
-}
-
-.container {
-  margin: 0 10%;
+  padding: 40px 10%;
 }
 
 .sulli {

@@ -16,10 +16,20 @@ function Header() {
       <div onBlur={ hideSidebar }>
         <IconContext.Provider value={ { color: 'var(--color-blue-grey-l5)' } }>
           <div className="navbar">
-            <NavLink to="#" className='menu-bars'>
-              <FaIcons.FaBars onClick={ showSideBar } />
-            </NavLink>
-            <NavLink to="/" id="logo">&#xFDFA;</NavLink>
+            <Link
+              to="#"
+              className='menu-bars'
+              onClick={ showSideBar }>
+              <FaIcons.FaBars />
+            </Link>
+
+            <Link
+              to="/"
+              id="logo"
+              onClick={ hideSidebar }
+            >
+              &#xFDFA;
+            </Link>
           </div>
 
           <nav className={ sidebar ? 'nav-menu active' : 'nav-menu' }>
@@ -27,11 +37,12 @@ function Header() {
               <li className='navbar-toggle'>
                 <Link
                   to="#"
-                  className="menu-bars"
+                  className="menu-times"
                   onClick={ hideSidebar }>
                   <FaIcons.FaTimes />
                 </Link>
               </li>
+
               { SidebarData.map((item, index) => {
                 return (
                   <li key={ index } className={ item.className }>

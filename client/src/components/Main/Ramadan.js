@@ -7,7 +7,7 @@ function Ramadan() {
 
   return (
     <main className='ramadan'>
-      <section className="container">
+      <section>
         <h1>Ramadan</h1>
       </section>
     </main>

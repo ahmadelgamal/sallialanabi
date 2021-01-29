@@ -7,7 +7,7 @@ function Contact() {
 
   return (
     <main className='contact'>
-      <section className='container'>
+      <section>
         <h1>Contact</h1>
       </section>
     </main>

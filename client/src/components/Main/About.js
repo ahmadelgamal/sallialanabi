@@ -7,7 +7,7 @@ function About() {
 
   return (
     <main className='about'>
-      <section className="container">
+      <section>
         <h1>About</h1>
         <p>Salli Ala Nabi includes a Ramadan Tracker that helps you set targets and track your daily activities and acts of worship, in Ramadan, in order to do more good deeds, God willing.</p>
       </section>

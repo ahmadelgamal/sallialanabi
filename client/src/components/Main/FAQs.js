@@ -7,7 +7,7 @@ function FAQs() {
 
   return (
     <main className='faqs'>
-      <section className='container'>
+      <section>
         <h1>FAQs</h1>
       </section>
     </main>
