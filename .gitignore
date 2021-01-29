@@ -1,0 +1,8 @@
+# files
+.DS_Store
+.eslintcache
+package-lock.json
+.env
+
+# folders
+node_modules

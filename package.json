@@ -1,0 +1,42 @@
+{
+  "name": "salli-ala-nabi.com",
+  "version": "1.0.0",
+  "description": "Salli Ala Nabi includes a Ramadan Tracker that helps you set targets and track your daily activities and acts of worship, in Ramadan, in order to do more good deeds, God willing.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seeds": "node server/seeds/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ahmadelgamal/sallialanabi.com.git"
+  },
+  "keywords": [
+    "online",
+    "store",
+    "shopping",
+    "construction",
+    "building",
+    "materials",
+    "material"
+  ],
+  "author": "Ahmad El Gamal",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/ahmadelgamal/sallialanabi.com/issues"
+  },
+  "homepage": "https://github.com/ahmadelgamal/sallialanabi.com#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  }
+}

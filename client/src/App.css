@@ -1,0 +1,16 @@
+/* ========== starts push footer to bottom of page (sticky footer) ========== */
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+/* ========== ends push footer to bottom of page (sticky footer) ========== */
+
+.error-404 {
+  padding: 40px 0;
+  color: var(--color-deep-orange);
+}
