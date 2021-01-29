@@ -7,7 +7,14 @@ function About() {
 
   return (
     <main className='about'>
-      <section>
+      <section key="hero-about" id="hero-about" className="hero-images">
+        <img
+          src={ require(`../../assets/images/about.jpg`).default }
+          alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
+        />
+      </section>
+
+      <section className="container">
         <h1>About</h1>
         <p>Salli Ala Nabi includes a Ramadan Tracker that helps you set targets and track your daily activities and acts of worship, in Ramadan, in order to do more good deeds, God willing.</p>
       </section>

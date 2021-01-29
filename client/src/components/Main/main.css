@@ -1,6 +1,10 @@
 main {
   background-color: var(--color-blue-grey-l5);
-  padding: 40px 10vw;
+  padding-bottom: 40px;
+}
+
+.container {
+  padding: 0 10vw;
 }
 
 .sulli {
@@ -55,6 +59,7 @@ p {
 
 .hero-images img {
   width: 100%;
+  padding-bottom: 40px;
 }
 
 #contact-form {

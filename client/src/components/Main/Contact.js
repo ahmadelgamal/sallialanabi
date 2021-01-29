@@ -55,42 +55,38 @@ function Contact() {
   }
 
   return (
-    <>
+    <main className="contacts">
       <section key="hero-contact" id="hero-contact" className="hero-images">
         <img
-          src={ require(`../../assets/images/cairo-skyline.jpg`).default }
+          src={ require(`../../assets/images/contact.jpg`).default }
           alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
-        // width="1920px"
-        // height="900px"
         />
       </section>
 
-      <main>
-        <section id="contacts" className="container">
-          <h1>Contact Us</h1>
-          <form id="contact-form" onSubmit={ handleSubmit }>
+      <section className="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" onSubmit={ handleSubmit }>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" name="name" placeholder="Please type your full name here" defaultValue={ name } onBlur={ handleChange } />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input type="email" name="email" autoComplete="email" className="validate" placeholder="Please type your email address here" defaultValue={ email } onBlur={ handleChange } />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea id="message-input" type="text" name="message" rows="7" placeholder="Please type your message here" defaultValue={ message } onBlur={ handleChange } />
+          </div>
+          <button id="contact-submit" type="submit" value="send">Submit</button>
+          { errorMessage && (
             <div>
-              <label htmlFor="name">Name:</label>
-              <input type="text" name="name" placeholder="Please type your full name here" defaultValue={ name } onBlur={ handleChange } />
+              <p id="contact-form-error-message">{ errorMessage }</p>
             </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input type="email" name="email" autoComplete="email" className="validate" placeholder="Please type your email address here" defaultValue={ email } onBlur={ handleChange } />
-            </div>
-            <div>
-              <label htmlFor="message">Message:</label>
-              <textarea id="message-input" type="text" name="message" rows="7" placeholder="Please type your message here" defaultValue={ message } onBlur={ handleChange } />
-            </div>
-            <button id="contact-submit" type="submit" value="send">Submit</button>
-            { errorMessage && (
-              <div>
-                <p id="contact-form-error-message">{ errorMessage }</p>
-              </div>
-            ) }
-          </form>
-        </section>
-      </main>
-    </>
+          ) }
+        </form>
+      </section>
+    </main>
   )
 }
 
