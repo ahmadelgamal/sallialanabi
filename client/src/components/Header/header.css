@@ -7,20 +7,22 @@
   background-color: var(--color-light-blue-d4);
 }
 
+.menu-bars {
+  margin-left: 10vw;
+}
+.menu-times {
+  margin-left: 5vw;
+}
+
 .menu-bars,
 .menu-times {
-  margin-left: 10%;
   background: none;
   font-size: 24px;
   transform: translateY(3px);
 }
 
-.menu-times {
-  margin-left: 5%;
-}
-
 #logo {
-  margin-right: 10%;
+  margin-right: 10vw;
   color: var(--color-blue-grey-l5);
   font-size: 30px;
   text-decoration: none;
@@ -54,7 +56,7 @@
 
 .nav-text a {
   display: flex;
-  padding-left: 5%;
+  padding: 0 5vw;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -70,7 +72,7 @@
 }
 
 .nav-menu-items {
-  margin: 0 10%;
+  margin: 0 5vw;
   width: 100%;
 }
 
@@ -103,10 +105,6 @@ span {
     transform: translateY(4px);
   }
 
-  .menu-times {
-    margin-left: 10%;
-  }
-
   #logo {
     font-size: 40px;
     transform: translateY(-4px);
@@ -119,7 +117,7 @@ span {
   .nav-text {
     margin-top: 20px;
   }
-  
+
   .nav-text a {
     font-size: 24px;
   }
@@ -134,7 +132,8 @@ span {
     height: 70px;
   }
 
-  .menu-bars {
+  .menu-bars,
+  .menu-times {
     font-size: 40px;
     transform: translateY(5px);
   }
@@ -162,7 +161,8 @@ span {
     height: 80px;
   }
 
-  .menu-bars {
+  .menu-bars,
+  .menu-times {
     font-size: 50px;
     transform: translateY(6px);
   }
