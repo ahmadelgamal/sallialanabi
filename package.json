@@ -8,29 +8,27 @@
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seeds": "node server/seeds/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ahmadelgamal/sallialanabi.com.git"
+    "url": "git+ssh://git@github.com/ahmadelgamal/sallialanabi.git"
   },
   "keywords": [
-    "online",
-    "store",
-    "shopping",
-    "construction",
-    "building",
-    "materials",
-    "material"
+    "islam",
+    "muslim",
+    "ramadan",
+    "pray",
+    "prayer",
+    "fast",
+    "fasting"
   ],
   "author": "Ahmad El Gamal",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/ahmadelgamal/sallialanabi.com/issues"
+    "url": "https://github.com/ahmadelgamal/sallialanabi/issues"
   },
-  "homepage": "https://github.com/ahmadelgamal/sallialanabi.com#readme",
+  "homepage": "https://github.com/ahmadelgamal/sallialanabi#readme",
   "devDependencies": {
     "concurrently": "^5.3.0"
   },
