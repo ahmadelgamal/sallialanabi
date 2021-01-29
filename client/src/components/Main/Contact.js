@@ -38,7 +38,7 @@ function Contact() {
   function handleSubmit(event) {
     event.preventDefault();
     // console.log(formState);
-    emailjs.sendForm('service_xbl8m76', 'template_qz8l7lm', event.target, 'user_3QlmspmFC6ohkE8C94IEp')
+    emailjs.sendForm(process.env.REACT_APP_EJSserviceId, process.env.REACT_APP_EJStemplateID, event.target, process.env.REACT_APP_EJSuserID)
       .then((result) => {
       }, (error) => {
         console.log(error.text);
