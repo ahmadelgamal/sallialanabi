@@ -40,8 +40,8 @@
 
 .nav-text {
   display: flex;
-  padding: 20px 10% 0px 10%;
-  height: 50px;
+  margin: 30px 5% 0 5%;
+  height: 70px;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
@@ -49,6 +49,7 @@
 
 .nav-text a {
   display: flex;
+  padding-left: 5%;
   align-items: center;
   height: 100%;
   width: 100%;
