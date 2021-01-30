@@ -8,6 +8,10 @@ main {
   padding: 0 10vw;
 }
 
+section:nth-of-type(n + 3) {
+  margin-top: 40px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -41,16 +45,25 @@ h2 {
   font-size: 30px;
   color: var(--color-light-blue);
 }
+h2:nth-of-type(n + 2) {
+  margin-top: 40px;
+}
 
 h3 {
   font-size: 24px;
   color: var(--color-light-green-d4);
+  text-align: center;
+}
+h3:nth-of-type(n + 2) {
+  margin-top: 20px;
 }
 
 h4 {
   font-size: 20px;
   color: var(--color-deep-orange-d4);
-  text-align: center;
+}
+h4:nth-of-type(n + 2) {
+  margin-top: 15px;
 }
 
 h5 {
@@ -121,6 +134,25 @@ p {
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border: 2px solid var(--color-light-blue-d4);
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--color-blue-grey-l5);
+}
+th {
+  background-color: var(--color-light-blue);
+  color: var(--color-blue-grey-l5);
+  border-radius: 5px 5px 0 0;
+}
+td {
+  border: 1px solid var(--color-light-blue);
+}
+td:last-of-type {
+  border-radius: 0 0 5px 5px;
 }
 /* ends mobile screen styling (width < 768px) */
 
