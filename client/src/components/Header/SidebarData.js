@@ -9,8 +9,14 @@ export const SidebarData = [
     className: 'nav-text'
   },
   {
-    title: 'Ramadan',
-    path: '/ramadan',
+    title: 'Resources',
+    path: '/resources',
+    icon: <FaIcons.FaQuran />,
+    className: 'nav-text'
+  },
+  {
+    title: 'Events',
+    path: '/events',
     icon: <FaIcons.FaMoon />,
     className: 'nav-text'
   },

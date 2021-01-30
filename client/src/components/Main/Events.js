@@ -1,25 +1,25 @@
 import React from 'react';
 import './main.css';
 
-function Ramadan() {
+function Events() {
 
-  document.title = 'Ramadan - Salli Ala Nabi';
+  document.title = 'Events - Salli Ala Nabi';
 
   return (
-    <main className='ramadan'>
-      <section key="hero-ramadan" id="hero-ramadan" className="hero-images">
+    <main className='events'>
+      <section key="hero-events" id="hero-events" className="hero-images">
         <img
-          src={ require(`../../assets/images/ramadan.jpg`).default }
+          src={ require(`../../assets/images/events.jpg`).default }
           alt="A lantern and a plate of dates on a table-top."
         />
       </section>
 
       <section className="container">
-        <h1>Ramadan</h1>
+        <h1>Events</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
     </main>
   )
 }
 
-export default Ramadan;
+export default Events;

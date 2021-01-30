@@ -6,7 +6,8 @@ import './App.css';
 import Header from './components/Header/';
 
 import Home from './components/Main/';
-import Ramadan from './components/Main/Ramadan';
+import Events from './components/Main/Events';
+import Resources from './components/Main/Resources';
 import FAQs from './components/Main/FAQs';
 import About from './components/Main/About';
 import Contact from './components/Main/Contact';
@@ -23,7 +24,8 @@ function App() {
         
         <Switch>
           <Route exact path='/' component={ Home } />
-          <Route exact path='/ramadan' component={ Ramadan } />
+          <Route exact path='/events' component={ Events } />
+          <Route exact path='/resources' component={ Resources } />
           <Route exact path='/faqs' component={ FAQs } />
           <Route exact path='/about' component={ About } />
           <Route exact path='/contact' component={ Contact } />

@@ -21,12 +21,12 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  text-align: center;
 }
 
 h1 {
   font-size: 40px;
   color: var(--color-blue-grey-d4);
+  text-align: center;
 }
 
 h2 {

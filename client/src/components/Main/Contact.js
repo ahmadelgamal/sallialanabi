@@ -59,7 +59,7 @@ function Contact() {
       <section key="hero-contact" id="hero-contact" className="hero-images">
         <img
           src={ require(`../../assets/images/contact.jpg`).default }
-          alt="Al-Aqsa mosque, in Jerusalem, Palestine."
+          alt="Amr Ibn Al-A'as mosque, Al-Fustat, Egypt."
         />
       </section>
 
