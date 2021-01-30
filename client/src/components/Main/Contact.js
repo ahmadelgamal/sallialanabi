@@ -4,6 +4,10 @@ import emailjs from 'emailjs-com';
 import './main.css';
 
 function Contact() {
+
+  document.title = 'Contact - Salli Ala Nabi';
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -88,6 +92,6 @@ function Contact() {
       </section>
     </main>
   )
-}
+};
 
 export default Contact;

@@ -3,6 +3,8 @@ import './main.css';
 
 function Account() {
 
+  document.title = 'Account - Salli Ala Nabi';
+
   return (
     <main className='account'>
       <section key="hero-account" id="hero-account" className="hero-images">
@@ -18,6 +20,6 @@ function Account() {
       </section>
     </main>
   )
-}
+};
 
 export default Account;

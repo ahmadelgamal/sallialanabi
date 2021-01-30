@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Resources() {
+
+  document.title = 'Resources - Salli Ala Nabi';
+
   return (
     <main className='resources'>
       <section key="hero-resources" id="hero-resources" className="hero-images">
@@ -26,6 +29,6 @@ function Resources() {
       </section>
     </main>
   )
-}
+};
 
 export default Resources

@@ -20,6 +20,6 @@ function Events() {
       </section>
     </main>
   )
-}
+};
 
 export default Events;

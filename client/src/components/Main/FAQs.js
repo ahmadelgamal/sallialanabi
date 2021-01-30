@@ -20,6 +20,6 @@ function FAQs() {
       </section>
     </main>
   )
-}
+};
 
 export default FAQs;

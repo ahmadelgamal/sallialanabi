@@ -20,6 +20,6 @@ function Rituals() {
       </section>
     </main>
   )
-}
+};
 
 export default Rituals;

@@ -50,6 +50,7 @@ h3 {
 h4 {
   font-size: 20px;
   color: var(--color-deep-orange-d4);
+  text-align: center;
 }
 
 h5 {
