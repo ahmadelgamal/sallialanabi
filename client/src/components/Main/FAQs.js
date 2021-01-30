@@ -7,10 +7,10 @@ function FAQs() {
 
   return (
     <main className='faqs'>
-      <section key="hero-home" id="hero-home" className="hero-images">
+      <section key="hero-faqs" id="hero-faqs" className="hero-images">
         <img
           src={ require(`../../assets/images/faqs.jpg`).default }
-          alt="Holy Ka'ba, in Mecca, Saudi Arabia."
+          alt="Al-Azhar Mosque, in Cairo, Egypt."
         />
       </section>
 

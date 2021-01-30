@@ -9,6 +9,12 @@ export const SidebarData = [
     className: 'nav-text'
   },
   {
+    title: 'Rituals',
+    path: '/rituals',
+    icon: <FaIcons.FaPray />,
+    className: 'nav-text'
+  },
+  {
     title: 'Resources',
     path: '/resources',
     icon: <FaIcons.FaQuran />,

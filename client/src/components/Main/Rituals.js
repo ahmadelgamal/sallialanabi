@@ -1,25 +1,25 @@
 import React from 'react';
 import './main.css';
 
-function Events() {
+function Rituals() {
 
-  document.title = 'Events - Salli Ala Nabi';
+  document.title = 'Rituals - Salli Ala Nabi';
 
   return (
-    <main className='events'>
-      <section key="hero-events" id="hero-events" className="hero-images">
+    <main className='Rituals'>
+      <section key="hero-Rituals" id="hero-Rituals" className="hero-images">
         <img
-          src={ require(`../../assets/images/events.jpg`).default }
-          alt="Quba' mosque, in outskirts of Medina, Saudi Arabia."
+          src={ require(`../../assets/images/rituals.jpg`).default }
+          alt="Holy Ka'ba, in Mecca, Saudi Arabia."
         />
       </section>
 
       <section className="container">
-        <h1>Events</h1>
+        <h1>Rituals</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
     </main>
   )
 }
 
-export default Events;
+export default Rituals;

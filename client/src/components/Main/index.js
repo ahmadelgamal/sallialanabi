@@ -16,8 +16,12 @@ function Home() {
 
       <section className="container">
         <h1 className="">Home</h1>
-        <h2 className="">Welcome to Salli Ala Nabi</h2>
-        <p><strong>Salli Ala Nabi</strong> is a Ramadan Tracker that helps you set targets and track your daily activities and acts of worship, in Ramadan, in order to do more good deeds, God willing.</p>
+
+        <h2 className="mt-20">Welcome to Salli Ala Nabi</h2>
+        <p><strong>Salli Ala Nabi</strong> is a modern and user-friendly resource on Islam. It provides basic information on rituals, resources and events.</p>
+
+        <h2 className="mt-40">Ramadan Tracker</h2>
+        <p><strong>Ramadan Tracker</strong> is a free and smart form that helps you identify daily acts of worship in Ramadan and track your performance on each one.</p>
       </section>
     </main>
   )

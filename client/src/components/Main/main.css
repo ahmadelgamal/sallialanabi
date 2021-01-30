@@ -8,6 +8,14 @@ main {
   padding: 0 10vw;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
 .sulli {
   font-size: 100px;
   text-align: center;
