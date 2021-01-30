@@ -8,7 +8,7 @@ function Account() {
       <section key="hero-account" id="hero-account" className="hero-images">
         <img
           src={ require(`../../assets/images/account.jpg`).default }
-          alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
+          alt="The Blue Mosque, in Istanbul, Turkey."
         />
       </section>
 

@@ -10,7 +10,7 @@ function Ramadan() {
       <section key="hero-ramadan" id="hero-ramadan" className="hero-images">
         <img
           src={ require(`../../assets/images/ramadan.jpg`).default }
-          alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
+          alt="A lantern and a plate of dates on a table-top."
         />
       </section>
 

@@ -10,7 +10,7 @@ function About() {
       <section key="hero-about" id="hero-about" className="hero-images">
         <img
           src={ require(`../../assets/images/about.jpg`).default }
-          alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
+          alt="Al-Azhar Mosque in Cairo, Egypt."
         />
       </section>
 

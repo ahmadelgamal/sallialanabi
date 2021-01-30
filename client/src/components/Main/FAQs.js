@@ -10,7 +10,7 @@ function FAQs() {
       <section key="hero-home" id="hero-home" className="hero-images">
         <img
           src={ require(`../../assets/images/faqs.jpg`).default }
-          alt="View of Cairo skyline from Ahmad's home in Giza, Egypt."
+          alt="Holy Ka'ba in Mecca, Saudi Arabia."
         />
       </section>
 
