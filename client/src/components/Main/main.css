@@ -1,3 +1,4 @@
+/* starts mobile screen styling (width < 768px) */
 main {
   background-color: var(--color-blue-grey-l5);
   padding-bottom: 40px;
@@ -83,7 +84,7 @@ p {
   border: 1px solid var(--color-blue-grey-d4);
   border-radius: 7px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #contact-form label {
@@ -106,3 +107,30 @@ p {
   border-radius: 10px;
   padding: 10px 20px;
 }
+
+#contact-form-error-message {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* ends mobile screen styling (width < 768px) */
+
+/* starts tablet screen styling (768px <= width <= 992px) */
+@media only screen and (min-width: 768px) {
+  #contact-form input,
+  #contact-form textarea,
+  #contact-form-error-message {
+    font-size: 20px;
+  }
+}
+/* ends tablet screen styling (768px <= width <= 992px) */
+
+/* starts desktop screen styling (992px <= width <= 1200px) */
+@media only screen and (min-width: 992px) {
+}
+/* ends desktop screen styling (992px <= width <= 1200px) */
+
+/* starts large desktop screen styling (1200px <= width) */
+@media only screen and (min-width: 1200px) {
+}
+/* ends large desktop screen styling (1200px <= width) */
