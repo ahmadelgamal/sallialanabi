@@ -6,7 +6,9 @@ function About() {
   document.title = 'About - Salli Ala Nabi';
 
   return (
-    <main className='about'>
+    <main
+      className='about'
+      onClick={ () => props.setSidebar(false) }>
       <section key="hero-about" id="hero-about" className="hero-images">
         <img
           src={ require(`../../assets/images/about.jpg`).default }

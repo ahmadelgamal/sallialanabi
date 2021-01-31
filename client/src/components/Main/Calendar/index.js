@@ -92,10 +92,6 @@ function Calendar() {
         <h4>'ashuraa</h4>
         <p>Lorem ipsum dolor sit amet, consectetur ad ipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
 
-        <h3>Mawalid</h3>
-        <h4>Birth of the Prophet Muhammad &#xFDFA;</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur ad ipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
-
         <h3>Beginning of New Hijri Year</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
@@ -108,7 +104,6 @@ function Calendar() {
 
         <h4>Arrival in Quba'</h4>
         <p>Lorem ipsum dolor sit amet, consectetur ad ipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
-
       </section>
     </main>
   )

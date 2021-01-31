@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Error_404(props) {
+function Error_404() {
 
   document.title = 'Error_404 - Salli Ala Nabi';
 

@@ -45,3 +45,7 @@
 strong {
   font-weight: 700;
 }
+
+.hidden {
+  display: none;
+}

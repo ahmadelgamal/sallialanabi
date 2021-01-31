@@ -8,9 +8,15 @@
 }
 
 .menu-bars {
+  color: var(--color-blue-grey-l5);
   margin-left: 10vw;
 }
+.blend-in {
+  color: var(--color-light-blue-d4);
+  transition: 500ms;
+}
 .menu-times {
+  color: var(--color-blue-grey-l5);
   margin-left: 5vw;
 }
 
@@ -37,7 +43,8 @@
   justify-content: center;
   width: 70vw;
   height: 100vh;
-  background-color: rgba(13, 71, 161, 0.8); /* var(--color-light-blue-d4); */
+  background-color: var(--color-light-blue-d4);
+  opacity: 0.8;
   transition: 500ms;
   overflow: scroll;
 }
@@ -83,7 +90,6 @@
   height: 50px;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--color-blue-d4);
 }
 
 span {
