@@ -36,6 +36,8 @@ function Header() {
             </NavLink>
       </div>
 
+      <div className="push-content-down"></div>
+
       <nav className={ sidebar ? 'nav-menu active' : 'nav-menu' }>
         <ul className='nav-menu-items'>
 
