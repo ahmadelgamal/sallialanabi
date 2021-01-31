@@ -35,7 +35,6 @@
   display: flex;
   position: fixed;
   z-index: 1;
-  padding-top: 44px;
   left: -100%;
   justify-content: center;
   width: 70vw;
@@ -102,10 +101,6 @@
     height: 50px;
   }
 
-  .nav-menu {
-    padding-top: 50px;
-  }
-
   .menu-bars,
   .menu-times {
     font-size: 26px;
@@ -137,10 +132,6 @@
     height: 55px;
   }
 
-  .nav-menu {
-    padding-top: 55px;
-  }
-
   .menu-bars,
   .menu-times {
     font-size: 28px;
@@ -168,10 +159,6 @@
   .push-content-down,
   .nav-text {
     height: 60px;
-  }
-
-  .nav-menu {
-    padding-top: 60px;
   }
 
   .menu-bars,
