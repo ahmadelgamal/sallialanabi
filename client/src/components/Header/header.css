@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 99;
   width: 100vw;
-  height: 50px;
+  height: 44px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-light-blue-d4);
@@ -22,7 +22,7 @@
 #logo {
   margin-right: 10vw;
   color: var(--color-blue-grey-l5);
-  font-size: 30px;
+  font-size: 28px;
   text-decoration: none;
   transform: translateY(-3px);
 }
@@ -31,7 +31,7 @@
   display: flex;
   position: fixed;
   z-index: 1;
-  margin-top: 50px;
+  margin-top: 44px;
   left: -100%;
   justify-content: center;
   width: 70vw;
@@ -86,11 +86,45 @@ span {
 @media only screen and (min-width: 768px) {
   .navbar,
   .nav-text {
-    height: 60px;
+    height: 50px;
   }
 
   .nav-menu {
-    margin-top: 60px;
+    margin-top: 50px;
+  }
+
+  .menu-bars,
+  .menu-times {
+    font-size: 26px;
+  }
+
+  #logo {
+    font-size: 32px;
+  }
+
+  .nav-menu {
+    width: 50vw;
+  }
+
+  .nav-text {
+    margin-top: 10px;
+  }
+
+  .nav-text a {
+    font-size: 22px;
+  }
+}
+/* ends tablet screen styling (768px <= width <= 992px) */
+
+/* starts desktop screen styling (992px <= width <= 1200px) */
+@media only screen and (min-width: 992px) {
+  .navbar,
+  .nav-text {
+    height: 55px;
+  }
+
+  .nav-menu {
+    margin-top: 55px;
   }
 
   .menu-bars,
@@ -100,12 +134,8 @@ span {
   }
 
   #logo {
-    font-size: 40px;
+    font-size: 36px;
     transform: translateY(-4px);
-  }
-
-  .nav-menu {
-    width: 50vw;
   }
 
   .nav-text {
@@ -116,60 +146,26 @@ span {
     font-size: 24px;
   }
 }
-/* ends tablet screen styling (768px <= width <= 992px) */
-
-/* starts desktop screen styling (992px <= width <= 1200px) */
-@media only screen and (min-width: 992px) {
-  .navbar,
-  .nav-text {
-    height: 70px;
-  }
-
-  .nav-menu {
-    margin-top: 70px;
-  }
-
-  .menu-bars,
-  .menu-times {
-    font-size: 32px;
-    transform: translateY(5px);
-  }
-
-  #logo {
-    font-size: 50px;
-    transform: translateY(-5px);
-  }
-
-  .nav-text {
-    margin-top: 30px;
-  }
-
-  .nav-text a {
-    font-size: 28px;
-  }
-}
 /* ends desktop screen styling (992px <= width <= 1200px) */
 
 /* starts large desktop screen styling (1200px <= width) */
 @media only screen and (min-width: 1200px) {
   .navbar,
   .nav-text {
-    height: 80px;
+    height: 60px;
   }
 
   .nav-menu {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   .menu-bars,
   .menu-times {
-    font-size: 36px;
-    transform: translateY(6px);
+    font-size: 30px;
   }
 
   #logo {
-    font-size: 60px;
-    transform: translateY(-6px);
+    font-size: 40px;
   }
 }
 /* ends large desktop screen styling (1200px <= width) */
