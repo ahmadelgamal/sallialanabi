@@ -36,13 +36,13 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 28px;
   color: var(--color-blue-grey-d4);
   text-align: center;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 24px;
   color: var(--color-light-blue);
 }
 h2:nth-of-type(n + 2) {
@@ -50,7 +50,7 @@ h2:nth-of-type(n + 2) {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--color-light-green-d4);
   text-align: center;
 }
@@ -59,7 +59,7 @@ h3:nth-of-type(n + 2) {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-deep-orange-d4);
 }
 h4:nth-of-type(n + 2) {
@@ -67,7 +67,7 @@ h4:nth-of-type(n + 2) {
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--color-light-blue-d4);
 }
 
@@ -77,7 +77,7 @@ h6 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .hero-images img {
@@ -158,6 +158,28 @@ td:last-of-type {
 
 /* starts tablet screen styling (768px <= width <= 992px) */
 @media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 21px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+  }
+
   #contact-form input,
   #contact-form textarea,
   #contact-form-error-message {
@@ -168,10 +190,52 @@ td:last-of-type {
 
 /* starts desktop screen styling (992px <= width <= 1200px) */
 @media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
 /* ends desktop screen styling (992px <= width <= 1200px) */
 
 /* starts large desktop screen styling (1200px <= width) */
 @media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 24px;
+  }
 }
 /* ends large desktop screen styling (1200px <= width) */

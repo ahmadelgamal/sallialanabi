@@ -26,6 +26,9 @@ function Resources() {
         
         <h2>Comparison</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
+
+        <h2 className='rtl align-left'>الاستصحاب (الشافعية) / الاستحسان (الحنفية) / المصلحة (المالكية والحنابلة)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
     </main>
   )
