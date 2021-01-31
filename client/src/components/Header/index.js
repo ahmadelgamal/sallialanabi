@@ -15,9 +15,16 @@ function Header() {
       <div className="navbar">
         <Link
           to="#"
-          className={ sidebar ? 'menu-bars blend-in' : 'menu-bars' }
+          className={ sidebar ? "menu-bars hidden" : "menu-bars" }
           onClick={ showSideBar }>
           <FaIcons.FaBars />
+        </Link>
+
+        <Link
+          to="#"
+          className={ sidebar ? "menu-times" : "menu-times hidden" }
+          onClick={ hideSidebar }>
+          <FaIcons.FaTimes />
         </Link>
 
         <NavLink
@@ -31,14 +38,6 @@ function Header() {
 
       <nav className={ sidebar ? 'nav-menu active' : 'nav-menu' }>
         <ul className='nav-menu-items'>
-          <li className='navbar-toggle'>
-            <Link
-              to="#"
-              className="menu-times"
-              onClick={ hideSidebar }>
-              <FaIcons.FaTimes />
-            </Link>
-          </li>
 
           { SidebarData.map((item, index) => {
             return (
