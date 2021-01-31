@@ -7,8 +7,8 @@ function About() {
 
   return (
     <main
-      className='about'
-      onClick={ () => props.setSidebar(false) }>
+      className='about'>
+      {/* onClick={ () => props.setSidebar(false) }> */}
       <section key="hero-about" id="hero-about" className="hero-images">
         <img
           src={ require(`../../assets/images/about.jpg`).default }
