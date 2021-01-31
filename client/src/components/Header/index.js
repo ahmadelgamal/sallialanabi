@@ -46,8 +46,7 @@ function Header() {
                 className={ item.className }>
                 <NavLink
                   exact to={ item.path }
-                  onClick={ hideSidebar }
-                  activeStyle={ { backgroundColor: '#33691e' } }>
+                  onClick={ hideSidebar }>
                   { item.icon }
                   <span>{ item.title }</span>
                 </NavLink>
