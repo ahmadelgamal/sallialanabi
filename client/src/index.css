@@ -42,6 +42,109 @@
   --color-blue-d4: #0d47a1;
 }
 
+.black {
+  background-color: var(--color-black);
+}
+.black-text {
+  color: var(--color-black);
+}
+
+.white {
+  background-color: var(--color-white);
+}
+.white-text {
+  color: var(--color-white);
+}
+
+.blue-grey-l5 {
+  background-color: var(--color-blue-grey-l5);
+}
+.blue-grey-l5-text {
+  color: var(--color-blue-grey-l5);
+}
+.blue-grey {
+  background-color: var(--color-blue-grey);
+}
+.blue-grey-text {
+  color: var(--color-blue-grey);
+}
+.blue-grey-d2 {
+  background-color: var(--color-blue-grey-d2);
+}
+.blue-grey-d2-text {
+  color: var(--color-blue-grey-d2);
+}
+.blue-grey-d4 {
+  background-color: var(--color-blue-grey-d4);
+}
+.blue-grey-d4-text {
+  color: var(--color-blue-grey-d4);
+}
+
+.d-orange {
+  background-color: var(--color-deep-orange);
+}
+.d-orange-text {
+  color: var(--color-deep-orange);
+}
+.d-orange-d2 {
+  background-color: var(--color-deep-orange-d2);
+}
+.d-orange-d2-text {
+  color: var(--color-deep-orange-d2);
+}
+.d-orange-d4 {
+  background-color: var(--color-deep-orange-d4);
+}
+.d-orange-d4-text {
+  color: var(--color-deep-orange-d4);
+}
+
+.l-green {
+  background-color: var(--color-light-green);
+}
+.l-green-text {
+  color: var(--color-light-green);
+}
+.l-green-d2 {
+  background-color: var(--color-light-green-d2);
+}
+.l-green-d2-text {
+  color: var(--color-light-green-d2);
+}
+.l-green-d4 {
+  background-color: var(--color-light-green-d4);
+}
+.l-green-d4-text {
+  color: var(--color-light-green-d4);
+}
+
+.l-blue {
+  background-color: var(--color-light-blue);
+}
+.l-blue-text {
+  color: var(--color-light-blue);
+}
+.l-blue-d2 {
+  background-color: var(--color-light-blue-d2);
+}
+.l-blue-d2-text {
+  color: var(--color-light-blue-d2);
+}
+.l-blue-d4 {
+  background-color: var(--color-light-blue-d4);
+}
+.l-blue-d4-text {
+  color: var(--color-light-blue-d4);
+}
+
+.blue-d4 {
+  background-color: var(--color-blue-d4);
+}
+.blue-d4-text {
+  color: var(--color-blue-d4);
+}
+
 .rtl {
   direction: rtl;
 }
@@ -56,4 +159,23 @@ strong {
 
 .hidden {
   display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+  }
 }

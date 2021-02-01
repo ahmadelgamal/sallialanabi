@@ -121,15 +121,16 @@ p {
   margin-bottom: 20px;
 }
 
-#contact-submit {
+.btn {
   display: block;
-  margin: 0 auto;
-  background-color: var(--color-light-blue-d4);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  width: 200px;
   color: var(--color-blue-grey-l5);
   font-size: 20px;
-  border: 1px solid var(--color-blue-grey-d4);
+  font-weight: 700;
   border-radius: 10px;
-  padding: 10px 20px;
 }
 
 #contact-form-error-message {
@@ -146,12 +147,39 @@ table {
   background-color: var(--color-blue-grey-l5);
 }
 th {
-  background-color: var(--color-light-blue);
+  padding: 10px;
+  min-width: 25vw;
+  background-color: var(--color-light-blue-d4);
   color: var(--color-blue-grey-l5);
-  border-radius: 5px 5px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
 }
+tr:first-of-type > th {
+  border-radius: 5px 0 0 0;
+}
+tr:last-of-type > th {
+  border-radius: 0 0 0 5px;
+}
+tr:first-of-type > td:last-of-type {
+  border-radius: 0 5px 0 0;
+}
+tr:last-of-type > td:last-of-type {
+  border-radius: 0 0 5px 0;
+}
+
 td {
+  padding: 10px;
+  min-width: 25vw;
+  font-size: 16px;
+  text-align: left;
   border: 1px solid var(--color-light-blue);
+  overflow-wrap: break-word;
+}
+td button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
 }
 td:last-of-type {
   border-radius: 0 0 5px 5px;
@@ -211,6 +239,11 @@ td:last-of-type {
     font-size: 20px;
   }
   p {
+    font-size: 20px;
+  }
+  th,
+  td,
+  td button {
     font-size: 20px;
   }
 }
