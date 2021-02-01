@@ -146,8 +146,8 @@ table {
   background-color: var(--color-blue-grey-l5);
 }
 th {
-  padding: 10px;
-  min-width: 20vw;
+  padding: 5px;
+  width: 20vw;
   background-color: var(--color-light-blue-d4);
   color: var(--color-blue-grey-l5);
   font-size: 16px;
@@ -168,8 +168,7 @@ tr:last-of-type > td:last-of-type {
 }
 
 td {
-  padding: 10px;
-  min-width: 25vw;
+  padding: 5px;
   font-size: 16px;
   text-align: left;
   border: 1px solid var(--color-light-blue);
@@ -177,8 +176,11 @@ td {
 }
 td button {
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
+}
+.edit-btn {
+  width: 10vw;
 }
 /* ends mobile screen styling (width < 768px) */
 
@@ -203,6 +205,11 @@ td button {
     font-size: 18px;
   }
   p {
+    font-size: 18px;
+  }
+  th,
+  td,
+  td button {
     font-size: 18px;
   }
 
@@ -266,6 +273,11 @@ td button {
     font-size: 24px;
   }
   p {
+    font-size: 24px;
+  }
+  th,
+  td,
+  td button {
     font-size: 24px;
   }
 }
