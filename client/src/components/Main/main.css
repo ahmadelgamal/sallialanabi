@@ -155,16 +155,16 @@ th {
   text-align: left;
 }
 tr:first-of-type > th {
-  border-radius: 5px 0 0 0;
+  border-radius: 7px 0 0 0;
 }
 tr:last-of-type > th {
-  border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 7px;
 }
 tr:first-of-type > td:last-of-type {
-  border-radius: 0 5px 0 0;
+  border-radius: 0 7px 0 0;
 }
 tr:last-of-type > td:last-of-type {
-  border-radius: 0 0 5px 0;
+  border-radius: 0 0 7px 0;
 }
 
 td {
