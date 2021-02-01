@@ -27,13 +27,13 @@ function Profile() {
 
         <table className='mt-20'>
           <tr>
-            <th>First Name:</th>
+            <th>First Name:</th>
             <td>Ahmad</td>
             <td className="d-orange-d4"><button className='blue-grey-l5-text'>Edit</button></td>
           </tr>
           <tr>
-            <th>Last Name:</th>
-            <td>El Gamal</td>
+            <th>Last Name:</th>
+            <td>El Gamal</td>
             <td className="d-orange-d4"><button className='blue-grey-l5-text'>Edit</button></td>
           </tr>
           <tr>
@@ -42,8 +42,8 @@ function Profile() {
             <td className="d-orange-d4"><button className='blue-grey-l5-text'>Edit</button></td>
           </tr>
           <tr>
-            <th>Date of Birth:</th>
-            <td>08 July 1978</td>
+            <th>Date of Birth:</th>
+            <td>08 July 1978</td>
             <td className="d-orange-d4"><button className='blue-grey-l5-text'>Edit</button></td>
           </tr>
         </table>
