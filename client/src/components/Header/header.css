@@ -4,14 +4,14 @@
   position: fixed;
   z-index: 99;
   width: 100vw;
-  height: 44px;
+  height: 45px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-light-blue-d4);
 }
 /* makes up for navbar being position fixed */
-.push-content-down {
-  height: 44px;
+.push-content-under-navbar {
+  height: 45px;
 }
 
 .menu-bars,
@@ -19,16 +19,16 @@
   color: var(--color-blue-grey-l5);
   margin-left: 10vw;
   background: none;
-  font-size: 24px;
-  transform: translateY(3px);
+  font-size: 23px;
+  transform: translateY(2px);
 }
 
 #logo {
   margin-right: 10vw;
   color: var(--color-blue-grey-l5);
-  font-size: 28px;
+  font-size: 27px;
   text-decoration: none;
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .nav-menu {
@@ -91,23 +91,32 @@
 .nav-text span {
   margin-left: 16px;
 }
+
+#app-name {
+  color: var(--color-blue-grey-l5);
+  font-size: 20px;
+}
 /* ends mobile screen styling (width < 768px) */
 
 /* starts tablet screen styling (768px <= width <= 992px) */
 @media only screen and (min-width: 768px) {
   .navbar,
-  .push-content-down,
+  .push-content-under-navbar,
   .nav-text {
-    height: 50px;
+    height: 47px;
   }
 
   .menu-bars,
   .menu-times {
-    font-size: 26px;
+    font-size: 25px;
+  }
+
+  #app-name {
+    font-size: 23px;
   }
 
   #logo {
-    font-size: 32px;
+    font-size: 31px;
   }
 
   .nav-menu {
@@ -119,7 +128,7 @@
   }
 
   .nav-text a {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 /* ends tablet screen styling (768px <= width <= 992px) */
@@ -127,20 +136,20 @@
 /* starts desktop screen styling (992px <= width <= 1200px) */
 @media only screen and (min-width: 992px) {
   .navbar,
-  .push-content-down,
+  .push-content-under-navbar,
   .nav-text {
-    height: 55px;
+    height: 49px;
   }
 
   .menu-bars,
   .menu-times {
-    font-size: 28px;
-    transform: translateY(4px);
+    font-size: 27px;
+    transform: translateY(3px);
   }
 
   #logo {
-    font-size: 36px;
-    transform: translateY(-4px);
+    font-size: 35px;
+    transform: translateY(-5px);
   }
 
   .nav-text {
@@ -148,7 +157,7 @@
   }
 
   .nav-text a {
-    font-size: 24px;
+    font-size: 23px;
   }
 }
 /* ends desktop screen styling (992px <= width <= 1200px) */
@@ -156,14 +165,18 @@
 /* starts large desktop screen styling (1200px <= width) */
 @media only screen and (min-width: 1200px) {
   .navbar,
-  .push-content-down,
+  .push-content-under-navbar,
   .nav-text {
-    height: 60px;
+    height: 50px;
   }
 
   .menu-bars,
   .menu-times {
-    font-size: 30px;
+    font-size: 29px;
+  }
+
+  #app-name {
+    font-size: 25px;
   }
 
   #logo {

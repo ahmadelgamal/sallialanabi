@@ -26,6 +26,8 @@ function Header() {
           onClick={ hideSidebar }>
           <FaIcons.FaTimes />
         </Link>
+        
+        <span id="app-name">Salli Ala Nabi</span>
 
         <NavLink
           to="/"
@@ -36,7 +38,7 @@ function Header() {
             </NavLink>
       </div>
 
-      <div className="push-content-down"></div>
+      <div className="push-content-under-navbar"></div>
 
       <nav className={ sidebar ? 'nav-menu active' : 'nav-menu' }>
         <ul className='nav-menu-items'>
