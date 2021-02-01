@@ -26,7 +26,7 @@ function Header() {
           onClick={ hideSidebar }>
           <FaIcons.FaTimes />
         </Link>
-        
+
         <span id="app-name">Salli Ala Nabi</span>
 
         <NavLink
@@ -59,6 +59,12 @@ function Header() {
           }) }
         </ul>
       </nav>
+
+      {/* used to hide sidebar when clicking outside of it */ }
+      <div
+        className={ sidebar ? 'right-side-bar active' : 'right-side-bar' }
+        onClick={ hideSidebar }>
+      </div>
     </header >
   );
 };
