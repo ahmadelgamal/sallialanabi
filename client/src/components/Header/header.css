@@ -137,6 +137,10 @@
   .nav-menu {
     width: 50vw;
   }
+  .right-side-bar.active {
+    left: 50vw;
+    width: 50vw;
+  }
 
   .nav-text {
     margin-top: 10px;
