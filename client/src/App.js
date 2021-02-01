@@ -14,7 +14,7 @@ import Ramadan from './components/Main/Ramadan';
 import FAQs from './components/Main/FAQs';
 import About from './components/Main/About';
 import Contact from './components/Main/Contact';
-import Account from './components/Main/Account';
+import Profile from './components/Main/Profile';
 import Error_404 from './components/Main/Error_404';
 
 import Footer from './components/Footer';
@@ -37,7 +37,7 @@ function App() {
           <Route exact path='/faqs' component={ FAQs } />
           <Route exact path='/about' component={ About } />
           <Route exact path='/contact' component={ Contact } />
-          <Route exact path='/account' component={ Account } />
+          <Route exact path='/profile' component={ Profile } />
           <Route path='/*' component={ Error_404 } />
         </Switch>
 

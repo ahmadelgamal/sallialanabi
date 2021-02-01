@@ -1,24 +1,24 @@
 import React from 'react';
 
-function Account() {
+function Profile() {
 
-  document.title = 'Account - Salli Ala Nabi';
+  document.title = 'Profile - Salli Ala Nabi';
 
   return (
-    <main className='account'>
-      <section key="hero-account" id="hero-account" className="hero-images">
+    <main className='profile'>
+      <section key="hero-profile" id="hero-profile" className="hero-images">
         <img
-          src={ require(`../../../assets/images/account.jpg`).default }
+          src={ require(`../../../assets/images/profile.jpg`).default }
           alt="The Blue Mosque, in Istanbul, Turkey."
         />
       </section>
 
       <section className="container">
-        <h1>Account</h1>
+        <h1>Profile</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
     </main>
   )
 };
 
-export default Account;
+export default Profile;

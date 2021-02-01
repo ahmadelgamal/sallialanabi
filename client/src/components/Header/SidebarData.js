@@ -51,8 +51,8 @@ export const SidebarData = [
     className: 'nav-text'
   },
   {
-    title: 'Account',
-    path: '/account',
+    title: 'Profile',
+    path: '/profile',
     icon: <FaIcons.FaUser />,
     className: 'nav-text'
   }
