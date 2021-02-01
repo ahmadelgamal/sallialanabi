@@ -60,9 +60,9 @@ function Header() {
         </ul>
       </nav>
 
-      {/* used to hide sidebar when clicking outside of it */ }
+      {/* this layer is used to hideSidebar when clicking outside of it */ }
       <div
-        className={ sidebar ? 'right-side-bar active' : 'right-side-bar' }
+        className={ sidebar ? 'right-side-layer active' : 'right-side-bar hidden' }
         onClick={ hideSidebar }>
       </div>
     </header >

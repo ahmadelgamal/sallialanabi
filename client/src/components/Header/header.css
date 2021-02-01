@@ -44,25 +44,18 @@
   transition: 500ms;
   overflow: scroll;
 }
-
 .nav-menu.active {
   left: 0;
   transition: 500ms;
 }
-
-.right-side-bar {
-  display: none;
-}
-
-.right-side-bar.active {
+.right-side-layer.active {
   display: flex;
   position: fixed;
   z-index: 1;
   left: 70vw;
   width: 30vw;
   height: 100vh;
-  background-color: white;
-  opacity: 0;
+  background-color: transparent;
 }
 
 .nav-menu-items {
@@ -137,7 +130,7 @@
   .nav-menu {
     width: 50vw;
   }
-  .right-side-bar.active {
+  .right-side-layer.active {
     left: 50vw;
     width: 50vw;
   }
