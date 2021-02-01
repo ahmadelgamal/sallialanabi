@@ -9,23 +9,29 @@ export const SidebarData = [
     className: 'nav-text'
   },
   {
-    title: 'Rituals',
-    path: '/rituals',
-    icon: <FaIcons.FaPray />,
-    className: 'nav-text'
-  },
-  {
-    title: 'Resources',
-    path: '/resources',
-    icon: <FaIcons.FaQuran />,
-    className: 'nav-text'
-  },
-  {
-    title: 'Calendar',
-    path: '/calendar',
+    title: 'Ramadan',
+    path: '/ramadan',
     icon: <FaIcons.FaMoon />,
     className: 'nav-text'
   },
+  // {
+  //   title: 'Rituals',
+  //   path: '/rituals',
+  //   icon: <FaIcons.FaPray />,
+  //   className: 'nav-text'
+  // },
+  // {
+  //   title: 'Resources',
+  //   path: '/resources',
+  //   icon: <FaIcons.FaQuran />,
+  //   className: 'nav-text'
+  // },
+  // {
+  //   title: 'Calendar',
+  //   path: '/calendar',
+  //   icon: <FaIcons.FaMoon />,
+  //   className: 'nav-text'
+  // },
   {
     title: 'FAQs',
     path: '/faqs',

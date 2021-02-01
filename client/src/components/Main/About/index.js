@@ -1,5 +1,4 @@
 import React from 'react';
-import './main.css';
 
 function About() {
 
@@ -8,10 +7,9 @@ function About() {
   return (
     <main
       className='about'>
-      {/* onClick={ () => props.setSidebar(false) }> */}
       <section key="hero-about" id="hero-about" className="hero-images">
         <img
-          src={ require(`../../assets/images/about.jpg`).default }
+          src={ require(`../../../assets/images/about.jpg`).default }
           alt="The Great Mosque, in Kufa, Iraq."
         />
       </section>

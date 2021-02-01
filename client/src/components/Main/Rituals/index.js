@@ -1,5 +1,4 @@
 import React from 'react';
-import './main.css';
 
 function Rituals() {
 
@@ -9,7 +8,7 @@ function Rituals() {
     <main className='Rituals'>
       <section key="hero-Rituals" id="hero-Rituals" className="hero-images">
         <img
-          src={ require(`../../assets/images/rituals.jpg`).default }
+          src={ require(`../../../assets/images/rituals.jpg`).default }
           alt="Holy Ka'ba, in Mecca, Saudi Arabia."
         />
       </section>

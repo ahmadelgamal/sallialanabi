@@ -1,25 +1,24 @@
 import React from 'react';
-import './main.css';
 
-function FAQs() {
+function Account() {
 
-  document.title = 'FAQs - Salli Ala Nabi';
+  document.title = 'Account - Salli Ala Nabi';
 
   return (
-    <main className='faqs'>
-      <section key="hero-faqs" id="hero-faqs" className="hero-images">
+    <main className='account'>
+      <section key="hero-account" id="hero-account" className="hero-images">
         <img
-          src={ require(`../../assets/images/faqs.jpg`).default }
-          alt="Al-Azhar Mosque, in Cairo, Egypt."
+          src={ require(`../../../assets/images/account.jpg`).default }
+          alt="The Blue Mosque, in Istanbul, Turkey."
         />
       </section>
 
       <section className="container">
-        <h1>FAQs</h1>
+        <h1>Account</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit et itaque eum ducimus sunt voluptates facere quia nulla? Consectetur ipsam perspiciatis error cupiditate laudantium corrupti omnis sint reiciendis fuga!</p>
       </section>
     </main>
   )
 };
 
-export default FAQs;
+export default Account;

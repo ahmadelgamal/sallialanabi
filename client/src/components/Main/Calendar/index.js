@@ -1,5 +1,4 @@
 import React from 'react';
-import '../main.css';
 // import { CalendarThData } from './CalendarThData';
 // import { CalendarTdData } from './CalendarTdData';
 

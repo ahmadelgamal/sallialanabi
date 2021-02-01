@@ -2,13 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
+import './components/Main/main.css'
 
-import Header from './components/Header/';
+import Header from './components/Header';
 
-import Home from './components/Main/';
-import Rituals from './components/Main/Rituals';
-import Resources from './components/Main/Resources';
-import Calendar from './components/Main/Calendar/';
+import Home from './components/Main';
+import Ramadan from './components/Main/Ramadan';
+// import Rituals from './components/Main/Rituals';
+// import Resources from './components/Main/Resources';
+// import Calendar from './components/Main/Calendar';
 import FAQs from './components/Main/FAQs';
 import About from './components/Main/About';
 import Contact from './components/Main/Contact';
@@ -28,9 +30,10 @@ function App() {
           <Route exact path='/' component={ Home } />
           <Route exact path='/index.html' component={ Home } />
           <Route exact path='/home' component={ Home } />
-          <Route exact path='/rituals' component={ Rituals } />
-          <Route exact path='/resources' component={ Resources } />
-          <Route exact path='/calendar' component={ Calendar } />
+          <Route exact path='/ramadan' component={ Ramadan } />
+          {/* <Route exact path='/rituals' component={ Rituals } /> */}
+          {/* <Route exact path='/resources' component={ Resources } /> */}
+          {/* <Route exact path='/calendar' component={ Calendar } /> */}
           <Route exact path='/faqs' component={ FAQs } />
           <Route exact path='/about' component={ About } />
           <Route exact path='/contact' component={ Contact } />

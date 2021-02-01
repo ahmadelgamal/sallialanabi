@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../../../utils/helpers';
 import emailjs from 'emailjs-com';
-import './main.css';
 
 function Contact() {
 
@@ -78,7 +77,7 @@ function Contact() {
     <main className="contacts">
       <section key="hero-contact" id="hero-contact" className="hero-images">
         <img
-          src={ require(`../../assets/images/contact.jpg`).default }
+          src={ require(`../../../assets/images/contact.jpg`).default }
           alt="Amr Ibn Al-A'as mosque, Al-Fustat, Egypt."
         />
       </section>

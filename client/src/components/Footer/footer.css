@@ -1,3 +1,4 @@
+/* starts mobile screen styling (width < 768px) */
 footer {
   padding: 17px 0;
   background-color: var(--color-light-blue-d2);
@@ -5,3 +6,28 @@ footer {
   text-align: center;
   font-size: 16px;
 }
+/* ends mobile screen styling (width < 768px) */
+
+/* starts tablet screen styling (768px <= width <= 992px) */
+@media only screen and (min-width: 768px) {
+  footer {
+    font-size: 18px;
+  }
+}
+/* ends tablet screen styling (768px <= width <= 992px) */
+
+/* starts desktop screen styling (992px <= width <= 1200px) */
+@media only screen and (min-width: 992px) {
+  footer {
+    font-size: 20px;
+  }
+}
+/* ends desktop screen styling (992px <= width <= 1200px) */
+
+/* starts large desktop screen styling (1200px <= width) */
+@media only screen and (min-width: 1200px) {
+  footer {
+    font-size: 22px;
+  }
+}
+/* ends large desktop screen styling (1200px <= width) */

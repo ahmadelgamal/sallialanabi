@@ -8,7 +8,7 @@ function Resources() {
     <main className='resources'>
       <section key="hero-resources" id="hero-resources" className="hero-images">
         <img
-          src={ require(`../../assets/images/resources.jpg`).default }
+          src={ require(`../../../assets/images/resources.jpg`).default }
           alt="Al-Aqsa mosque, in Jerusalem, (occupied) Palestine."
         />
       </section>
