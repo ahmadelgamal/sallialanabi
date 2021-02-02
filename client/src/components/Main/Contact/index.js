@@ -97,7 +97,7 @@ function Contact() {
             <label htmlFor="message">Message:</label>
             <textarea id="message-input" type="text" name="message" rows="7" placeholder="Please type your message here" defaultValue={ message } onBlur={ handleChange } />
           </div>
-          <button className="btn l-blue-d4" id="contact-submit" type="submit" value="send">Submit</button>
+          <button id="contact-submit" type="submit" value="send">Submit</button>
           { errorMessage && (
             <div>
               <p id="contact-form-error-message">{ errorMessage }</p>

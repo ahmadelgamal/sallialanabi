@@ -1,4 +1,5 @@
 /* starts mobile screen styling (width < 768px) */
+/* starts common styles */
 main {
   background-color: var(--color-blue-grey-l5);
   padding-bottom: 40px;
@@ -6,10 +7,6 @@ main {
 
 .container {
   padding: 0 10vw;
-}
-
-section:nth-of-type(n + 3) {
-  margin-top: 40px;
 }
 
 .mt-20 {
@@ -20,12 +17,6 @@ section:nth-of-type(n + 3) {
   margin-top: 40px;
 }
 
-.sulli {
-  font-size: 100px;
-  text-align: center;
-  color: var(--color-light-blue);
-}
-
 h1,
 h2,
 h3,
@@ -33,6 +24,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 h1 {
@@ -45,25 +38,16 @@ h2 {
   font-size: 24px;
   color: var(--color-light-blue);
 }
-h2:nth-of-type(n + 2) {
-  margin-top: 40px;
-}
 
 h3 {
   font-size: 20px;
   color: var(--color-light-green-d4);
   text-align: center;
 }
-h3:nth-of-type(n + 2) {
-  margin-top: 20px;
-}
 
 h4 {
   font-size: 18px;
   color: var(--color-deep-orange-d4);
-}
-h4:nth-of-type(n + 2) {
-  margin-top: 15px;
 }
 
 h5 {
@@ -76,17 +60,32 @@ h6 {
   color: var(--color-blue-grey-d4);
 }
 
-p {
+p,
+button,
+th,
+td,
+td button {
   font-size: 16px;
 }
 
 .hero-images img {
   width: 100vw;
   max-height: 97vh;
-  padding-bottom: 20px;
   object-fit: cover;
 }
 
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 0px;
+  width: 150px;
+  color: var(--color-blue-grey-l5);
+  border-radius: 10px;
+}
+/* ends common styles */
+
+/* starts Contact component styles */
 #contact-form {
   max-width: 600px;
   margin: 20px auto 0 auto;
@@ -95,42 +94,25 @@ p {
   padding: 20px;
 }
 
-#contact-form label,
-#contact-form input,
-#contact-form textarea {
-  background-color: var(--color-blue-grey-l5);
-  display: block;
-  width: 100%;
-}
-
-#contact-form input,
-#contact-form textarea {
-  border: 1px solid var(--color-blue-grey-d4);
-  border-radius: 7px;
-  padding: 10px;
-  font-size: 16px;
-}
-
 #contact-form label {
+  display: block;
   margin-bottom: 5px;
   font-size: 20px;
 }
 
 #contact-form input,
 #contact-form textarea {
+  display: block;
   margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid var(--color-blue-grey-d4);
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-.btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 20px;
-  width: 200px;
-  color: var(--color-blue-grey-l5);
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 10px;
+.contacts button {
+  background-color: var(--color-light-blue-d4);
 }
 
 #contact-form-error-message {
@@ -138,54 +120,81 @@ p {
   text-align: center;
   margin-top: 10px;
 }
+/* ends Contact component styles */
 
-table {
+/* starts Profile component styles */
+.profile h3 {
+  color: var(--color-light-blue-d4);
+}
+.profile h3 span {
+  color: var(--color-black);
+}
+.profile .btn-container {
+  display: flex;
+  flex-direction: column;
+}
+.profile .btn-container button {
+  margin-top: 20px;
+}
+.profile .btn-container button:nth-of-type(1) {
+  background-color: var(--color-light-blue-d4);
+}
+.profile .btn-container button:nth-of-type(2) {
+  background-color: var(--color-light-blue-d2);
+}
+.profile .btn-container button:nth-of-type(3) {
+  background-color: var(--color-deep-orange-d4);
+}
+
+.profile table {
+  margin-top: 20px;
   width: 100%;
   border: 3px solid var(--color-light-blue-d4);
   border-radius: 10px;
   background-color: var(--color-blue-grey-l5);
 }
-th {
-  padding: 5px;
+.profile tr:first-of-type > th {
+  border-radius: 7px 0 0 0;
+}
+.profile tr:last-of-type > th {
+  border-radius: 0 0 0 7px;
+}
+.profile tr:first-of-type > td:last-of-type {
+  border-radius: 0 7px 0 0;
+}
+.profile tr:last-of-type > td:last-of-type {
+  border-radius: 0 0 7px 0;
+}
+.profile th {
+  padding: 0 10px;
   width: 20vw;
   background-color: var(--color-light-blue-d4);
   color: var(--color-blue-grey-l5);
-  font-size: 16px;
   font-weight: 700;
   text-align: left;
 }
-tr:first-of-type > th {
-  border-radius: 7px 0 0 0;
-}
-tr:last-of-type > th {
-  border-radius: 0 0 0 7px;
-}
-tr:first-of-type > td:last-of-type {
-  border-radius: 0 7px 0 0;
-}
-tr:last-of-type > td:last-of-type {
-  border-radius: 0 0 7px 0;
-}
-
-td {
-  padding: 5px;
-  font-size: 16px;
+.profile td {
+  padding: 0 10px;
   text-align: left;
   border: 1px solid var(--color-light-blue);
   overflow-wrap: break-word;
 }
-td button {
+.profile td button {
   width: 100%;
-  font-size: 16px;
   font-weight: 700;
 }
-.edit-btn {
-  width: 10vw;
+.profile td:last-of-type {
+  background-color: var(--color-deep-orange-d4);
 }
+.profile td:last-of-type button {
+  color: var(--color-blue-grey-l5);
+}
+/* ends Profile component styles */
 /* ends mobile screen styling (width < 768px) */
 
 /* starts tablet screen styling (768px <= width <= 992px) */
 @media only screen and (min-width: 768px) {
+  /* starts common styles */
   h1 {
     font-size: 32px;
   }
@@ -204,25 +213,38 @@ td button {
   h6 {
     font-size: 18px;
   }
-  p {
-    font-size: 18px;
-  }
+  p,
+  button,
   th,
   td,
   td button {
     font-size: 18px;
   }
+  /* ends common styles */
 
+  /* starts Contact component styles */
   #contact-form input,
   #contact-form textarea,
   #contact-form-error-message {
     font-size: 20px;
   }
+  /* ends Contact component styles */
+
+  /* starts Profile component styles */
+  .profile .btn-container {
+    flex-direction: row;
+  }
+  .profile .btn-container button {
+    padding: 10px 0;
+    width: 180px;
+  }
+  /* ends Profile component styles */
 }
 /* ends tablet screen styling (768px <= width <= 992px) */
 
 /* starts desktop screen styling (992px <= width <= 1200px) */
 @media only screen and (min-width: 992px) {
+  /* starts common styles */
   h1 {
     font-size: 36px;
   }
@@ -241,19 +263,26 @@ td button {
   h6 {
     font-size: 20px;
   }
-  p {
-    font-size: 20px;
-  }
+  p,
+  button,
   th,
   td,
   td button {
     font-size: 20px;
   }
+  /* ends common styles */
+
+  /* starts Profile component styles */
+  .profile .btn-container button {
+    width: 200px;
+  }
+  /* ends Profile component styles */
 }
 /* ends desktop screen styling (992px <= width <= 1200px) */
 
 /* starts large desktop screen styling (1200px <= width) */
 @media only screen and (min-width: 1200px) {
+  /* starts common styles */
   h1 {
     font-size: 40px;
   }
@@ -272,13 +301,19 @@ td button {
   h6 {
     font-size: 24px;
   }
-  p {
-    font-size: 24px;
-  }
+  p,
+  button,
   th,
   td,
   td button {
     font-size: 24px;
   }
+  /* ends common styles */
+
+  /* starts Profile component styles */
+  .profile .btn-container button {
+    width: 220px;
+  }
+  /* ends Profile component styles */
 }
 /* ends large desktop screen styling (1200px <= width) */

@@ -16,36 +16,36 @@ function Profile() {
       <section className="container">
         <h1>Profile</h1>
         <h2>Required Information:</h2>
-        <h3 className="mt-20">Email: <span className="black-text">ahmadelgamal@gmail.com</span></h3>
-        <div className="flex">
-          <button className="btn d-orange-d4 mt-20">Change Email</button>
-          <button className="btn l-green-d4 mt-20">Change Password</button>
-          <button className="btn d-orange-d4 mt-20">Delete Account</button>
+        <h3>Email: <span>ahmadelgamal@gmail.com</span></h3>
+        <div className="btn-container">
+          <button>Change Email</button>
+          <button>Change Password</button>
+          <button>Delete Account</button>
         </div>
 
         <h2>Optional Details:</h2>
 
-        <table className='mt-20'>
+        <table>
           <tbody>
             <tr>
               <th>First Name:</th>
               <td>Ahmad</td>
-              <td className="d-orange-d4 edit-btn"><button className='blue-grey-l5-text'>Edit</button></td>
+              <td><button>Edit</button></td>
             </tr>
             <tr>
               <th>Last Name:</th>
               <td>El Gamal</td>
-              <td className="d-orange-d4 edit-btn"><button className='blue-grey-l5-text'>Edit</button></td>
+              <td><button>Edit</button></td>
             </tr>
             <tr>
               <th>Gender:</th>
               <td>Male</td>
-              <td className="d-orange-d4 edit-btn"><button className='blue-grey-l5-text'>Edit</button></td>
+              <td><button>Edit</button></td>
             </tr>
             <tr>
               <th>Date of Birth:</th>
               <td>08 July 1978</td>
-              <td className="d-orange-d4 edit-btn"><button className='blue-grey-l5-text'>Edit</button></td>
+              <td><button>Edit</button></td>
             </tr>
           </tbody>
         </table>
