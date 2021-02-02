@@ -16,25 +16,26 @@ function Profile() {
       <section className="container">
         <h1>Profile</h1>
         <h2>Required Information:</h2>
-        <h3>Email: <span>ahmadelgamal@gmail.com</span></h3>
+        <h3>Email: <span>omarabdallah@gmail.com</span></h3>
         <div className="btn-container">
           <button>Change Email</button>
           <button>Change Password</button>
           <button>Delete Account</button>
         </div>
+      </section>
 
+      <section className='container'>
         <h2>Optional Details:</h2>
-
         <table>
           <tbody>
             <tr>
               <th>First Name:</th>
-              <td>Ahmad</td>
+              <td>Omar</td>
               <td><button>Edit</button></td>
             </tr>
             <tr>
               <th>Last Name:</th>
-              <td>El Gamal</td>
+              <td>Abdallah</td>
               <td><button>Edit</button></td>
             </tr>
             <tr>
@@ -44,7 +45,7 @@ function Profile() {
             </tr>
             <tr>
               <th>Date of Birth:</th>
-              <td>08 July 1978</td>
+              <td>20 August 1980</td>
               <td><button>Edit</button></td>
             </tr>
           </tbody>

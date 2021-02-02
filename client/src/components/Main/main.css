@@ -2,19 +2,10 @@
 /* starts common styles */
 main {
   background-color: var(--color-blue-grey-l5);
-  padding-bottom: 40px;
 }
 
 .container {
-  padding: 0 10vw;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.mt-40 {
-  margin-top: 40px;
+  margin: 40px 10vw;
 }
 
 h1,
@@ -135,6 +126,7 @@ button {
 }
 .profile .btn-container button {
   margin-top: 20px;
+  width: 100%;
 }
 .profile .btn-container button:nth-of-type(1) {
   background-color: var(--color-light-blue-d4);
@@ -170,13 +162,14 @@ button {
   width: 20vw;
   background-color: var(--color-light-blue-d4);
   color: var(--color-blue-grey-l5);
+  border: none;
   font-weight: 700;
   text-align: left;
 }
 .profile td {
   padding: 0 10px;
   text-align: left;
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid var(--color-light-blue-d4);
   overflow-wrap: break-word;
 }
 .profile td button {
@@ -185,6 +178,7 @@ button {
 }
 .profile td:last-of-type {
   background-color: var(--color-deep-orange-d4);
+  border: none;
 }
 .profile td:last-of-type button {
   color: var(--color-blue-grey-l5);
@@ -236,7 +230,11 @@ button {
   }
   .profile .btn-container button {
     padding: 10px 0;
-    width: 180px;
+    width: 23vw;
+  }
+  .profile .btn-container button:nth-of-type(2) {
+    margin-left: 5.5vw;
+    margin-right: 5.5vw;
   }
   /* ends Profile component styles */
 }
@@ -271,11 +269,6 @@ button {
     font-size: 20px;
   }
   /* ends common styles */
-
-  /* starts Profile component styles */
-  .profile .btn-container button {
-    width: 200px;
-  }
   /* ends Profile component styles */
 }
 /* ends desktop screen styling (992px <= width <= 1200px) */
@@ -309,11 +302,6 @@ button {
     font-size: 24px;
   }
   /* ends common styles */
-
-  /* starts Profile component styles */
-  .profile .btn-container button {
-    width: 220px;
-  }
   /* ends Profile component styles */
 }
 /* ends large desktop screen styling (1200px <= width) */
