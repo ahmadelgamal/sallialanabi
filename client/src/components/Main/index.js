@@ -16,11 +16,16 @@ function Home() {
       <section className="container">
         <h1>Home</h1>
 
-        <h2>Welcome to Salli Ala Nabi</h2>
-        <p><strong>Salli Ala Nabi</strong> is a modern and user-friendly resource on Islam. It provides basic information on rituals, resources and events.</p>
+        <h2>What is Salli Ala Nabi?</h2>
+        <p><strong>Salli Ala Nabi</strong> is a modern and user-friendly progressive web application (PWA) that helps you:</p>
+        <ul>
+          <li>Set goals for daily acts of worship in Ramadan</li>
+          <li>Record your activities</li>
+          <li>Track your performance on each one.</li>
+        </ul>
 
-        <h2>Ramadan Tracker</h2>
-        <p><strong>Ramadan Tracker</strong> is a free and smart form that helps you identify daily acts of worship in Ramadan and track your performance on each one.</p>
+        <h2>Resgister/Login</h2>
+        <p></p>
       </section>
     </main>
   )

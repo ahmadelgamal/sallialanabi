@@ -2,15 +2,30 @@
 footer {
   padding: 17px 10vw;
   background-color: var(--color-light-blue-d2);
-  color: white;
   text-align: center;
+}
+
+footer a,
+footer p {
   font-size: 16px;
+  color: var(--color-blue-grey-l5);
+}
+footer a {
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+footer .flex {
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 /* ends mobile screen styling (width < 768px) */
 
 /* starts tablet screen styling (768px <= width <= 992px) */
 @media only screen and (min-width: 768px) {
-  footer {
+  footer a,
+  footer p {
     font-size: 18px;
   }
 }
@@ -18,7 +33,8 @@ footer {
 
 /* starts desktop screen styling (992px <= width <= 1200px) */
 @media only screen and (min-width: 992px) {
-  footer {
+  footer a,
+  footer p {
     font-size: 20px;
   }
 }
@@ -26,7 +42,8 @@ footer {
 
 /* starts large desktop screen styling (1200px <= width) */
 @media only screen and (min-width: 1200px) {
-  footer {
+  footer a,
+  footer p {
     font-size: 22px;
   }
 }

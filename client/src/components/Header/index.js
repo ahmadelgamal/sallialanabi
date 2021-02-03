@@ -27,7 +27,7 @@ function Header() {
           <FaIcons.FaTimes />
         </Link>
 
-        <span id="app-name">Salli Ala Nabi</span>
+        {/* <span id="app-name">Salli Ala Nabi</span> */ }
 
         <NavLink
           to="/"
@@ -36,6 +36,12 @@ function Header() {
         >
           &#xFDFA;
             </NavLink>
+
+        <Link
+          to="#"
+          className="menu-plus">
+          <FaIcons.FaPlus />
+        </Link>
       </div>
 
       <div className="push-content-under-navbar"></div>

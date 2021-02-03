@@ -2,6 +2,7 @@
 .navbar {
   display: flex;
   position: fixed;
+  padding: 0 10vw;
   z-index: 99;
   width: 100vw;
   height: 45px;
@@ -13,18 +14,16 @@
 .push-content-under-navbar {
   height: 45px;
 }
-
 .menu-bars,
-.menu-times {
+.menu-times,
+.menu-plus {
   color: var(--color-blue-grey-l5);
-  margin-left: 10vw;
   background: none;
   font-size: 23px;
   transform: translateY(2px);
 }
 
 #logo {
-  margin-right: 10vw;
   color: var(--color-blue-grey-l5);
   font-size: 27px;
   text-decoration: none;
@@ -37,7 +36,7 @@
   z-index: 1;
   left: -100%;
   justify-content: center;
-  width: 70vw;
+  width: 80vw;
   height: 100vh;
   background-color: var(--color-light-blue-d4);
   opacity: 0.8;
