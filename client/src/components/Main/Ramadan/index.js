@@ -20,6 +20,12 @@ function Ramadan() {
 
       <section className='container'>
         <h2>List of suggested daily worship activities</h2>
+
+        <div className='flex header'>
+          <h4>As Salamu Alaikum <span>Omar</span></h4>
+          <h4>Today's Weight: 93kg</h4>
+        </div>
+
         <div className='flex'>
           <article>
             <h3>Daily Prayers (<i> Salat </i>)</h3>

@@ -202,7 +202,6 @@ button {
 }
 .ramadan article h3 {
   margin-top: 0px;
-  /* margin-bottom: 10px; */
 }
 .ramadan article h3,
 .ramadan article p,
@@ -210,12 +209,13 @@ button {
   color: var(--color-white);
 }
 .ramadan article .prayer label {
-  /* background-color: red; */
-  /* min-width: 100px; */
   text-align: center;
 }
 .ramadan article p {
   font-size: 16px;
+}
+.ramadan .header {
+  margin-bottom: 40px;
 }
 /* ends Ramadan component styles */
 /* ends mobile screen styling (width < 768px) */
@@ -271,21 +271,20 @@ button {
     margin-right: 5.5vw;
   }
   /* ends Profile component styles */
-  .ramadan .container div {
+
+  /* starts Ramadan component styles */
+  .ramadan .container .flex {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ramadan .container .header {
+    justify-content: space-evenly;
   }
   .ramadan article {
     width: 45%;
   }
-  .ramadan article:nth-of-type(odd) {
-    margin-right: 10%;
-  }
-  /* .ramadan article div.flex { */
-  /* background-color: red; */
-  /* /* flex-direction: row; */
-  /* justify-content: space-around; */
-  /* } */
+  /* ends Ramadan component styles */
 }
 /* ends tablet screen styling (768px <= width <= 992px) */
 
@@ -318,7 +317,6 @@ button {
     font-size: 20px;
   }
   /* ends common styles */
-  /* ends Profile component styles */
 }
 /* ends desktop screen styling (992px <= width <= 1200px) */
 
@@ -351,30 +349,11 @@ button {
     font-size: 24px;
   }
   /* ends common styles */
-  /* ends Profile component styles */
+
+  /* starts Ramadan component styles */
   .ramadan article {
     width: 30%;
   }
-  .ramadan article:nth-of-type(odd) {
-    margin-right: 0;
-  }
-  .ramadan article:nth-of-type(3n + 2) {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  /* .ramadan article:nth-of-type(3n + 2) {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .ramadan article {
-    width: 20%;
-    margin-left: 2.5%;
-  }
-  .ramadan article:nth-of-type(4n+1) {
-    margin-left: 0;
-  }
-  .ramadan article:nth-of-type(2) {
-    margin-left: 2.5%;
-  } */
+  /* ends Ramadan component styles */
 }
 /* ends large desktop screen styling (1200px <= width) */
