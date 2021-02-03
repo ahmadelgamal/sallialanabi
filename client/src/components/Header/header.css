@@ -73,7 +73,7 @@
 }
 
 .nav-text:hover {
-  background-color: var(--color-gold-d2);
+  background-color: var(--color-blue-grey-l5);
 }
 
 .nav-text:hover a,
@@ -95,8 +95,12 @@
 }
 
 .nav-text a.active {
-  background-color: var(--color-blue-grey-l5);
+  background-color: var(--color-gold-d2);
   color: var(--color-blue-d4);
+}
+
+.nav-text a.active span {
+  font-weight: 700;
 }
 
 .nav-text span {
