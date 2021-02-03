@@ -26,30 +26,32 @@ function Profile() {
 
       <section className='container'>
         <h2>Optional Details:</h2>
-        <table>
-          <tbody>
-            <tr>
-              <th>First Name:</th>
-              <td>Omar</td>
-              <td><button>Edit</button></td>
-            </tr>
-            <tr>
-              <th>Last Name:</th>
-              <td>Abdallah</td>
-              <td><button>Edit</button></td>
-            </tr>
-            <tr>
-              <th>Gender:</th>
-              <td>Male</td>
-              <td><button>Edit</button></td>
-            </tr>
-            <tr>
-              <th>Date of Birth:</th>
-              <td>20 August 1980</td>
-              <td><button>Edit</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <div className='scroll'>
+          <table>
+            <tbody>
+              <tr>
+                <th>First Name:</th>
+                <td>Omar</td>
+                <td><button>Edit</button></td>
+              </tr>
+              <tr>
+                <th>Last Name:</th>
+                <td>Abdallah</td>
+                <td><button>Edit</button></td>
+              </tr>
+              <tr>
+                <th>Gender:</th>
+                <td>Male</td>
+                <td><button>Edit</button></td>
+              </tr>
+              <tr>
+                <th>Date of Birth:</th>
+                <td>20 August 1980</td>
+                <td><button>Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   )

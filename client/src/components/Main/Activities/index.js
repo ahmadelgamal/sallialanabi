@@ -7,11 +7,11 @@ function Activities() {
   return (
     <main className='activities ramadan'>
       <section className='container'>
-        <h2>List of suggested daily worship activities for Ramadan 1442</h2>
+        <h1>Record Activities</h1>
 
         <div className='flex header'>
-          <h4>As Salamu Alaikum <span>Omar</span></h4>
-          <h4>Today's Weight: 93kg</h4>
+          <h4>As Salamu Alaikum <span>Omar!</span></h4>
+          <h5>Today's Weight: <span>93kg</span></h5>
         </div>
 
         <div className='flex'>

@@ -5,7 +5,7 @@ main {
 }
 
 .container {
-  margin: 40px 10vw;
+  margin: 20px 10vw;
 }
 
 h1,
@@ -36,7 +36,9 @@ h3 {
   text-align: center;
 }
 
-h4 {
+h4,
+ul,
+ol {
   font-size: 18px;
   color: var(--color-blue-grey-d4);
 }
@@ -53,6 +55,7 @@ h6 {
 }
 
 p,
+li,
 button,
 th,
 td,
@@ -74,6 +77,11 @@ button {
   width: 150px;
   color: var(--color-blue-grey-l5);
   border-radius: 10px;
+}
+
+ul,
+ol {
+  margin-left: 10vw;
 }
 /* ends common styles */
 
@@ -139,7 +147,9 @@ button {
 .profile .btn-container button:nth-of-type(3) {
   background-color: var(--color-gold-d2);
 }
-
+.profile .scroll {
+  overflow: auto;
+}
 .profile table {
   margin-top: 20px;
   width: 100%;
@@ -189,7 +199,7 @@ button {
 
 /* starts Ramadan component styles */
 .ramadan .header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .ramadan article {
   margin-bottom: 20px;
@@ -232,7 +242,9 @@ button {
   h3 {
     font-size: 24px;
   }
-  h4 {
+  h4,
+  ul,
+  ol {
     font-size: 21px;
   }
   h5 {
@@ -242,6 +254,7 @@ button {
     font-size: 18px;
   }
   p,
+  li,
   button,
   th,
   td,
@@ -303,7 +316,9 @@ button {
   h3 {
     font-size: 28px;
   }
-  h4 {
+  h4,
+  ul,
+  ol {
     font-size: 24px;
   }
   h5 {
@@ -313,6 +328,7 @@ button {
     font-size: 20px;
   }
   p,
+  li,
   button,
   th,
   td,
@@ -335,7 +351,9 @@ button {
   h3 {
     font-size: 32px;
   }
-  h4 {
+  h4,
+  ul,
+  ol {
     font-size: 28px;
   }
   h5 {
@@ -345,6 +363,7 @@ button {
     font-size: 24px;
   }
   p,
+  li,
   button,
   th,
   td,

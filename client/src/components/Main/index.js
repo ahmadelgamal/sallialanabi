@@ -18,13 +18,14 @@ function Home() {
 
         <h2>What is Salli Ala Nabi?</h2>
         <p><strong>Salli Ala Nabi</strong> is a modern and user-friendly progressive web application (PWA) that helps you:</p>
-        <ul>
-          <li>Set goals for daily acts of worship in Ramadan</li>
-          <li>Record your activities</li>
+        <ol>
+          <li>Set goals for daily acts of worship in Ramadan.</li>
+          <li>Record your activities.</li>
           <li>Track your performance on each one.</li>
-        </ul>
+          <li>Create or join a support group.</li>
+        </ol>
 
-        <h2>Resgister/Login</h2>
+        <h5>Resgister/Login</h5>
         <p></p>
       </section>
     </main>

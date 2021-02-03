@@ -15,27 +15,27 @@ export const SidebarData = [
     className: 'nav-text'
   },
   {
-    title: 'Support Group',
-    path: '/support',
-    icon: <FaIcons.FaUsers />,
-    className: 'nav-text'
-  },
-  {
     title: 'Set Goals',
     path: '/goals',
     icon: <FaIcons.FaBullseye />,
     className: 'nav-text'
   },
   {
-    title: 'Track Activities',
+    title: 'Record Activities',
     path: '/activities',
     icon: <FaIcons.FaPray />,
     className: 'nav-text'
   },
   {
-    title: 'Reports',
+    title: 'Track Performance',
     path: '/reports',
     icon: <FaIcons.FaCalendarWeek />,
+    className: 'nav-text'
+  },
+  {
+    title: 'Support Group',
+    path: '/support',
+    icon: <FaIcons.FaUsers />,
     className: 'nav-text'
   },
   {
