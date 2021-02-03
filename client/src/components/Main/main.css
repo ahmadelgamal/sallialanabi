@@ -188,6 +188,9 @@ button {
 /* ends Profile component styles */
 
 /* starts Ramadan component styles */
+.ramadan .header {
+  margin-bottom: 40px;
+}
 .ramadan article {
   margin-bottom: 20px;
   padding: 10px;
@@ -213,9 +216,6 @@ button {
 }
 .ramadan article p {
   font-size: 16px;
-}
-.ramadan .header {
-  margin-bottom: 40px;
 }
 /* ends Ramadan component styles */
 /* ends mobile screen styling (width < 768px) */
@@ -279,7 +279,6 @@ button {
     justify-content: space-between;
   }
   .ramadan article .flex-row {
-    flex-wrap: wrap;
     justify-content: space-between;
   }
   .ramadan .container .header {

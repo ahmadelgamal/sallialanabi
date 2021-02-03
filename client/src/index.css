@@ -189,11 +189,13 @@ b {
 .flex {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
