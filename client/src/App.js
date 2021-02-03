@@ -8,6 +8,7 @@ import Header from './components/Header';
 
 import Home from './components/Main';
 import Ramadan from './components/Main/Ramadan';
+import Activities from './components/Main/Activities';
 // import Rituals from './components/Main/Rituals';
 // import Resources from './components/Main/Resources';
 // import Calendar from './components/Main/Calendar';
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/index.html' component={ Home } />
           <Route exact path='/home' component={ Home } />
           <Route exact path='/ramadan' component={ Ramadan } />
+          <Route exact path='/activities' component={ Activities } />
           {/* <Route exact path='/rituals' component={ Rituals } /> */}
           {/* <Route exact path='/resources' component={ Resources } /> */}
           {/* <Route exact path='/calendar' component={ Calendar } /> */}
