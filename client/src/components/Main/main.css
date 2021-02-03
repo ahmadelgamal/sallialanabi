@@ -278,6 +278,10 @@ button {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .ramadan article .flex-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .ramadan .container .header {
     justify-content: space-evenly;
   }
