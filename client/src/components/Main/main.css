@@ -27,28 +27,29 @@ h1 {
 
 h2 {
   font-size: 24px;
-  color: var(--color-light-blue);
+  color: var(--color-light-blue-d4);
 }
 
 h3 {
   font-size: 20px;
-  color: var(--color-light-green-d4);
+  color: var(--color-gold-d2);
   text-align: center;
 }
 
 h4 {
   font-size: 18px;
-  color: var(--color-deep-orange-d4);
+  color: var(--color-blue-grey-d4);
 }
 
 h5 {
   font-size: 17px;
   color: var(--color-light-blue-d4);
+  text-align: center;
 }
 
 h6 {
   font-size: 16px;
-  color: var(--color-blue-grey-d4);
+  color: var(--color-gold-d2);
 }
 
 p,
@@ -114,10 +115,7 @@ button {
 /* ends Contact component styles */
 
 /* starts Profile component styles */
-.profile h3 {
-  color: var(--color-light-blue-d4);
-}
-.profile h3 span {
+.profile h5 span {
   color: var(--color-black);
 }
 .profile .btn-container {
@@ -132,10 +130,14 @@ button {
   background-color: var(--color-light-blue-d4);
 }
 .profile .btn-container button:nth-of-type(2) {
-  background-color: var(--color-light-blue-d2);
+  /* background-color: var(--color-light-blue-d2); */
+  background-color: var(--color-blue-grey-l5);
+  color: var(--color-black);
+  /* color: var(--color-light-blue-d4); */
+  border: 2px solid var(--color-light-blue-d4);
 }
 .profile .btn-container button:nth-of-type(3) {
-  background-color: var(--color-deep-orange-d4);
+  background-color: var(--color-gold-d2);
 }
 
 .profile table {
@@ -177,13 +179,42 @@ button {
   font-weight: 700;
 }
 .profile td:last-of-type {
-  background-color: var(--color-deep-orange-d4);
+  background-color: var(--color-gold-d2);
   border: none;
 }
 .profile td:last-of-type button {
   color: var(--color-blue-grey-l5);
 }
 /* ends Profile component styles */
+
+/* starts Ramadan component styles */
+.ramadan article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.ramadan article:nth-of-type(odd) {
+  background-color: var(--color-light-blue-d2);
+}
+.ramadan article:nth-of-type(even) {
+  background-color: var(--color-gold-d2);
+}
+.ramadan article h3 {
+  margin-top: 0px;
+  /* margin-bottom: 10px; */
+}
+.ramadan article h3,
+.ramadan article p,
+.ramadan article label {
+  color: var(--color-white);
+}
+.ramadan article .prayer label {
+  /* background-color: red; */
+  /* min-width: 100px; */
+  text-align: center;
+}
+/* ends Ramadan component styles */
 /* ends mobile screen styling (width < 768px) */
 
 /* starts tablet screen styling (768px <= width <= 992px) */
@@ -237,6 +268,11 @@ button {
     margin-right: 5.5vw;
   }
   /* ends Profile component styles */
+  .ramadan article div.flex {
+    /* background-color: red; */
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 /* ends tablet screen styling (768px <= width <= 992px) */
 

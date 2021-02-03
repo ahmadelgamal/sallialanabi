@@ -73,10 +73,12 @@
 }
 
 .nav-text:hover {
-  background-color: var(--color-deep-orange);
+  background-color: var(--color-gold-d2);
 }
 
+.nav-text:hover a,
 .nav-text:hover span {
+  color: var(--color-blue-d4);
   font-weight: 700;
 }
 
@@ -93,7 +95,8 @@
 }
 
 .nav-text a.active {
-  background-color: var(--color-light-green-d4);
+  background-color: var(--color-blue-grey-l5);
+  color: var(--color-blue-d4);
 }
 
 .nav-text span {

@@ -18,8 +18,24 @@
 }
 
 :root {
-  --color-black: #000000; /* black */
-  --color-white: #ffffff; /* white */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-gold-special: #b8860b;
+
+  --color-gold-d3: #AC8F00;
+  --color-gold-d2: #C7A600;
+  --color-gold-d1: #E3BE00;
+  --color-gold: #ffd700;
+  --color-teal: #00E2FF;
+  --color-turquoise: #00C9FF;
+  --color-turquoise-d1: #00B1FF;
+
+  --color-caramel-l2: #c78752;
+  --color-caramel-l1: #a97947;
+  --color-caramel: #a0734d;
+  --color-caramel-d1: #8c6028;
+  --color-caramel-d2: #80532d;
 
   /* the following colors follow the materialize css color naming */
   --color-blue-grey-l5: #eceff1;
@@ -168,13 +184,21 @@ b {
 
 .inline {
   display: inline-block;
-}
+} */
 
 .flex {
   display: flex;
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
 .mt-20 {
   margin-top: 20px;
 }

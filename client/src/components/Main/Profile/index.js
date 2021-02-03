@@ -16,7 +16,7 @@ function Profile() {
       <section className="container">
         <h1>Profile</h1>
         <h2>Required Information:</h2>
-        <h3>Email: <span>omarabdallah@gmail.com</span></h3>
+        <h5>Email: <span>omarabdallah@gmail.com</span></h5>
         <div className="btn-container">
           <button>Change Email</button>
           <button>Change Password</button>
