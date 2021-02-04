@@ -5,7 +5,7 @@ main {
 }
 
 .container {
-  margin: 20px 10vw;
+  margin: 2vh 10vw;
 }
 
 h1,
@@ -15,8 +15,6 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 5px;
 }
 
 h1 {
@@ -32,7 +30,7 @@ h2 {
 
 h3 {
   font-size: 20px;
-  color: var(--color-gold-d2);
+  color: var(--color-gold-d3);
   text-align: center;
 }
 
@@ -63,12 +61,6 @@ td button {
   font-size: 16px;
 }
 
-.hero-images img {
-  width: 100vw;
-  max-height: 97vh;
-  object-fit: cover;
-}
-
 button {
   display: block;
   margin-left: auto;
@@ -81,7 +73,7 @@ button {
 
 ul,
 ol {
-  margin-left: 10vw;
+  margin-left: 5vw;
 }
 /* ends common styles */
 
@@ -151,7 +143,6 @@ ol {
   overflow: auto;
 }
 .profile table {
-  margin-top: 20px;
   width: 100%;
   border: 3px solid var(--color-light-blue-d4);
   border-radius: 10px;

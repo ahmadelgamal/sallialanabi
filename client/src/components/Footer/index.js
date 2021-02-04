@@ -5,7 +5,7 @@ import './footer.css';
 function Footer() {
   return (
     <footer>
-      <div className='flex'>
+      <div className='footer-nav flex'>
         <NavLink exact to='/about'>
           About
         </NavLink>
@@ -16,7 +16,7 @@ function Footer() {
           FAQs
         </NavLink>
       </div>
-      <div>
+      <div className='copyright'>
         <p>Copyright &copy; 2021 Salli Ala Nabi.</p>
       </div>
     </footer>

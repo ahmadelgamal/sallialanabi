@@ -1,7 +1,11 @@
 /* starts mobile screen styling (width < 768px) */
-footer {
-  padding: 17px 10vw;
+footer .footer-nav {
+  padding: 1vh 10vw;
   background-color: var(--color-light-blue-d2);
+}
+footer .copyright {
+  padding: 1vh 10vw;
+  background-color: var(--color-light-blue-d4);
   text-align: center;
 }
 
@@ -11,7 +15,6 @@ footer p {
   color: var(--color-blue-grey-l5);
 }
 footer a {
-  margin-bottom: 20px;
   text-decoration: none;
 }
 

@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 
 function Activities() {
 
-  document.title = 'Activities - Salli Ala Nabi';
+  document.title = 'Record Activities - Salli Ala Nabi';
 
   return (
     <main className='activities ramadan'>

@@ -23,8 +23,8 @@ export const SidebarData =
     },
     {
       title: 'Track Performance',
-      path: '/reports',
-      icon: <FaIcons.FaCalendarWeek />,
+      path: '/performance',
+      icon: <FaIcons.FaChartLine />,
       className: 'nav-text'
     },
     {
