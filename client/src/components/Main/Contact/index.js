@@ -50,7 +50,7 @@ function Contact() {
 
     if (event.target.querySelector("input[name='email'").value.trim() === "") setErrorMessage('Please type your email address');
     else validEmail = true;
-    
+
     if (event.target.querySelector("textarea[name='message'").value.trim() === "") setErrorMessage('Please type your message');
     else validMessage = true;
 
@@ -74,13 +74,6 @@ function Contact() {
 
   return (
     <main className="contacts">
-      <section key="hero-contact" id="hero-contact" className="hero-images">
-        <img
-          src={ require(`../../../assets/images/contact.jpg`).default }
-          alt="Amr Ibn Al-A'as mosque, Al-Fustat, Egypt."
-        />
-      </section>
-
       <section className="container">
         <h1>Contact Us</h1>
         <form id="contact-form" onSubmit={ handleSubmit }>

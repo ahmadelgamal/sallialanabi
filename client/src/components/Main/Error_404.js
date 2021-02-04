@@ -7,13 +7,6 @@ function Error_404() {
 
   return (
     <main className='error_404'>
-      <section key="hero-error-404" id="hero-error-404" className="hero-images">
-        <img
-          src={ require(`../../assets/images/error-404.jpg`).default }
-          alt="Dome of the Rock mosque, in Jerusalem, (occupied) Palestine."
-        />
-      </section>
-
       <section className="container">
         <h1>Error-404</h1>
         <h4 className="mt-20">You have requested a page that does not exist.</h4>

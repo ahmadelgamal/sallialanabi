@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FaIcons from 'react-icons/fa';
 
 function Activities() {
 
@@ -8,9 +9,11 @@ function Activities() {
     <main className='activities ramadan'>
       <section className='container'>
         <h1>Record Activities</h1>
+        <h2>3 Ramadan 1442</h2>
+        <h3><FaIcons.FaArrowLeft /> 18 April 2021 <FaIcons.FaArrowRight /></h3>
 
         <div className='flex header'>
-          <h4>As Salamu Alaikum <span>Omar!</span></h4>
+          <h4>As Salamu Alaikum <span>Muhammad!</span></h4>
           <h5>Today's Weight: <span>93kg</span></h5>
         </div>
 

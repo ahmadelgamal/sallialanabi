@@ -6,13 +6,6 @@ function Home() {
 
   return (
     <main className='home'>
-      <section key="hero-home" id="hero-home" className="hero-images">
-        <img
-          src={ require(`../../assets/images/home.jpg`).default }
-          alt="The holy mosque, at Medina, Saudi Arabia."
-        />
-      </section>
-
       <section className="container">
         <h1>Home</h1>
 

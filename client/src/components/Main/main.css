@@ -228,6 +228,9 @@ ol {
   font-size: 16px;
 }
 /* ends Ramadan component styles */
+.activities h2 {
+  text-align: center;
+}
 /* ends mobile screen styling (width < 768px) */
 
 /* starts tablet screen styling (768px <= width <= 992px) */

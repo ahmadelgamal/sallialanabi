@@ -6,17 +6,10 @@ function Profile() {
 
   return (
     <main className='profile'>
-      <section key="hero-profile" id="hero-profile" className="hero-images">
-        <img
-          src={ require(`../../../assets/images/profile.jpg`).default }
-          alt="The Blue Mosque, in Istanbul, Turkey."
-        />
-      </section>
-
       <section className="container">
         <h1>Profile</h1>
         <h2>Required Information:</h2>
-        <h5>Email: <span>omarabdallah@gmail.com</span></h5>
+        <h5>Email: <span>muhammadabdallah@gmail.com</span></h5>
         <div className="btn-container">
           <button>Change Email</button>
           <button>Change Password</button>
@@ -31,7 +24,7 @@ function Profile() {
             <tbody>
               <tr>
                 <th>First Name:</th>
-                <td>Omar</td>
+                <td>Muhammad</td>
                 <td><button>Edit</button></td>
               </tr>
               <tr>
