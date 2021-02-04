@@ -7,15 +7,14 @@ import './components/Main/main.css'
 import Header from './components/Header';
 
 import Home from './components/Main';
-import Ramadan from './components/Main/Ramadan';
+import Profile from './components/Main/Profile';
+// import Goals from './components/Main/Goals';
 import Activities from './components/Main/Activities';
-// import Rituals from './components/Main/Rituals';
-// import Resources from './components/Main/Resources';
-// import Calendar from './components/Main/Calendar';
+// import Performance from './components/Main/Performance';
+// import Support from './components/Main/Support';
 import FAQs from './components/Main/FAQs';
 import About from './components/Main/About';
 import Contact from './components/Main/Contact';
-import Profile from './components/Main/Profile';
 import Error_404 from './components/Main/Error_404';
 
 import Footer from './components/Footer';
@@ -31,15 +30,15 @@ function App() {
           <Route exact path='/' component={ Home } />
           <Route exact path='/index.html' component={ Home } />
           <Route exact path='/home' component={ Home } />
-          <Route exact path='/ramadan' component={ Ramadan } />
+          <Route exact path='/profile' component={ Profile } />
+          {/* <Route exact path='/goals' component={ Goals } /> */}
           <Route exact path='/activities' component={ Activities } />
-          {/* <Route exact path='/rituals' component={ Rituals } /> */}
-          {/* <Route exact path='/resources' component={ Resources } /> */}
-          {/* <Route exact path='/calendar' component={ Calendar } /> */}
+          {/* <Route exact path='/performance' component={ Performance } /> */}
+          {/* <Route exact path='/support' component={ Support } /> */}
           <Route exact path='/faqs' component={ FAQs } />
+          {/* <Route exact path='/logout' component={ Logout } /> */}
           <Route exact path='/about' component={ About } />
           <Route exact path='/contact' component={ Contact } />
-          <Route exact path='/profile' component={ Profile } />
           <Route path='/*' component={ Error_404 } />
         </Switch>
 
