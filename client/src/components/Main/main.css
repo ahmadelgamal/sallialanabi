@@ -106,6 +106,10 @@ ol {
 remember {
   width: 20%;
 }
+.home .error-message p {
+  color: var(--gold-d3);
+  font-weight: 700;
+}
 /* ends Home component styles */
 
 /* starts Contact component styles */
