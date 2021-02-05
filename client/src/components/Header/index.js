@@ -27,8 +27,6 @@ function Header() {
           <FaIcons.FaTimes />
         </Link>
 
-        {/* <span id="app-name">Salli Ala Nabi</span> */ }
-
         <NavLink
           to="/"
           id="logo"

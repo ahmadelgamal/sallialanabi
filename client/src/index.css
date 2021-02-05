@@ -181,10 +181,10 @@ b {
 .block {
   display: block;
 }
-
+*/
 .inline {
   display: inline-block;
-} */
+}
 
 .flex {
   display: flex;

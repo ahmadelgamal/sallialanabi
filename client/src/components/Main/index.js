@@ -9,24 +9,38 @@ function Home() {
       <section className="container">
         <h1>Home</h1>
 
-        <h2>What is Salli Ala Nabi?</h2>
-        <h3>Reminder</h3>
-        <p>First, we are honored and humbled to constantly remind you to send prayers and peace upon the Prophet Muhammad and his family.</p>
-        
-        <h3>Ramadan</h3>
-        <p>Second, this is a modern and user-friendly PWA (Progressive Web Application) that helps you:</p>
-        <ol>
-          <li>Set goals for daily acts of worship in Ramadan.</li>
-          <li>Record your activities.</li>
-          <li>Track your performance on each one.</li>
-          <li>Create or join a support group.</li>
-        </ol>
+        <h2>Login:</h2>
+        <div className="login">
+          <label forHtml="email">Email:</label>
+          <br />
+          <input type="text" placeholder="Enter your email address" name="email" required />
+          <br />
 
-        <h2>Want to join?</h2>
-        <h5>Register</h5>
+          <label forHtml="password">Password:</label>
+          <br />
+          <input type="password" placeholder="Enter Password" name="password" autocomplete='current-password' required />
+          <br />
 
-        <h2>Already registered?</h2>
-        <h5>Login</h5>
+          <label id='remember-id'>Remember me?</label>
+          <input id='remember' type="checkbox" checked="checked" name="remember" />
+          <button type="submit">Login</button>
+          <br />
+        </div>
+
+        <h2>Don't have an account?</h2>
+        <h3>Register now!</h3>
+        <div className="register">
+          <label forHtml="email">Email:</label>
+          <br />
+          <input type="text" placeholder="Enter your email address" name="email" required />
+          <br />
+
+          <label forHtml="password">Password:</label>
+          <br />
+          <input type="password" placeholder="Enter Password" name="password" autocomplete='new-password' required />
+          <br />
+          <button type="submit">Register</button>
+        </div>
       </section>
     </main>
   )
