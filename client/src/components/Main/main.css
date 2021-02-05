@@ -21,6 +21,7 @@ th {
 }
 p,
 li,
+input,
 button,
 td,
 td button {
@@ -46,6 +47,7 @@ h3 {
 
 h4,
 ul,
+label,
 ol {
   font-size: 18px;
   color: var(--color-blue-grey-d4);
@@ -64,6 +66,7 @@ h6 {
 
 p,
 li,
+input,
 button,
 th,
 td,
@@ -165,10 +168,8 @@ remember {
   background-color: var(--color-light-blue-d4);
 }
 .profile .btn-container button:nth-of-type(2) {
-  /* background-color: var(--color-light-blue-d2); */
   background-color: var(--color-blue-grey-l5);
   color: var(--color-black);
-  /* color: var(--color-light-blue-d4); */
   border: 2px solid var(--color-light-blue-d4);
 }
 .profile .btn-container button:nth-of-type(3) {
@@ -272,6 +273,7 @@ remember {
     font-size: 24px;
   }
   h4,
+  label,
   ul,
   ol {
     font-size: 21px;
@@ -284,6 +286,7 @@ remember {
   }
   p,
   li,
+  input,
   button,
   th,
   td,
@@ -291,6 +294,12 @@ remember {
     font-size: 18px;
   }
   /* ends common styles */
+
+  /* starts Home component styles */
+  .home input {
+    padding: 10px 20px;
+  }
+  /* ends Home component styles */
 
   /* starts Contact component styles */
   #contact-form input,
@@ -346,6 +355,7 @@ remember {
     font-size: 28px;
   }
   h4,
+  label,
   ul,
   ol {
     font-size: 24px;
@@ -358,6 +368,7 @@ remember {
   }
   p,
   li,
+  input,
   button,
   th,
   td,
@@ -381,6 +392,7 @@ remember {
     font-size: 32px;
   }
   h4,
+  label,
   ul,
   ol {
     font-size: 28px;
@@ -393,6 +405,7 @@ remember {
   }
   p,
   li,
+  input,
   button,
   th,
   td,
