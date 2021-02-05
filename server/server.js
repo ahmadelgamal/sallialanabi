@@ -5,38 +5,15 @@ const session = require('express-session');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./routes');
-
-const sess = {
-  secret: 'why do you ask?',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
-};
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.use(session(sess));
-app.use(routes);  //  comes after: app.use(bodyParser.json());
-
-// Serve up static assets
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
-
-// app.get('/service-worker.js', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../client/build/serviceWorker.js'));
-// });
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+//  comes after: app.use(bodyParser.json());
+app.use(routes);
 
 // turn on connection to db and server
 sequelize
@@ -44,3 +21,24 @@ sequelize
   .then(() => {
     app.listen(PORT, () => console.log('App listening on port: ', PORT));
   });
+
+// Serve up static assets
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+// comes after serving static assets
+const sess = {
+  secret: process.env.SESS_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+app.use(session(sess));
