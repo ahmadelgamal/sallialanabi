@@ -12,17 +12,17 @@ const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//  comes after: app.use(bodyParser.json());
+//  routes comes after: app.use(bodyParser.json());
 app.use(routes);
 
-// turn on connection to db and server
+// turns on connection to db and server
 sequelize
   .sync({ force: false })
   .then(() => {
     app.listen(PORT, () => console.log('App listening on port: ', PORT));
   });
 
-// Serve up static assets
+// serves up static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
 
 // comes after serving static assets
 const sess = {
-  secret: process.env.SESS_SECRET,
+  secret: process.env.AUTH_SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,
