@@ -5,20 +5,24 @@ exports.user_create = (req, res) => {
   console.log('=============== CREATE User ===============');
   User
     .create({
-      username: req.body.username,
       email: req.body.email,
       password: req.body.password
     })
     .then(user => {
-      req.session.save(() => {
-        req.session.user_id = user.id;
-        req.session.username = user.username;
-        req.session.loggedIn = true;
+      res.json(user);
+      // console.log('user: ', user);
+      // console.log('request in controller: ', req);
 
-        res.json(user);
-      });
+      // req.session.save(() => {
+      //   req.session.user_id = user.id;
+      //   req.session.email = user.email;
+      //   req.session.loggedIn = true;
+      // });
     })
-    .catch(error => res.status(500).json(error));
+    .catch(error => {
+      console.error('error: ', error);
+      res.status(500).json(error)
+    });
 };
 
 exports.user_list = (req, res) => {

@@ -1,50 +1,144 @@
-import React from "react";
+import React, { useState } from "react";
+import { validateEmail } from '../../utils/helpers';
+// import Auth from '../../utils/auth';
 
 function Home() {
 
   document.title = 'Home - Salli Ala Nabi';
 
-  async function registerHandler(event) {
+  // login form
+  const [loginFormState, setLoginFormState] = useState({ loginEmail: '', loginPassword: '', loginRememberMe: false });
+  const [loginErrorMessage, setLoginErrorMessage] = useState('');
+
+  // update state based on login form input changes
+  const handleLoginFormChange = (event) => {
+    const { name, value } = event.target;
+
+    setLoginFormState({
+      ...loginFormState,
+      [name]: value,
+    });
+
+    console.log(name, value);
+  };
+
+  // submit login form
+  const handleLoginFormSubmit = async (event) => {
     event.preventDefault();
 
-    const email = document.querySelector("#register-email").value.trim();
+    const { email, password, rememberMe } = loginFormState;
+
+    console.log(loginFormState);
     console.log(email);
-    const password = document.querySelector("#register-password").value.trim();
     console.log(password);
-    const confirmPassword = document.querySelector('#register-confirm-password').value.trim();
-    console.log(confirmPassword);
-    let response = [];
+    console.log(rememberMe);
 
-    if (password.length < 8) {
-      document.querySelector('#register-error-message').innerHTML = 'Password must be at least 8 characters long';
+    setLoginErrorMessage('Ok');
 
-    } else if (password !== confirmPassword) {
-      document.querySelector('#register-error-message').innerHTML = 'Password does not match';
+    // if username is not found
+    //   setLoginErrorMessage('Username not found');
 
-    } else if (email && password) {
+    // if password is incorrect
+    //   setLoginErrorMessage('Please check your password');
+  };
 
-      response = await fetch("/api/users", {
-        method: "post",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
-      console.log(response);
+  // register form
+  const [registerFormState, setRegisterFormState] = useState({ email: '', password: '', confirmPassword: '' });
+  const [registerErrorMessage, setRegisterErrorMessage] = useState('');
 
-      // check the response status
-      if (response.ok) {
-        document.querySelector('#register-error-message').innerHTML = 'You have successfully signed up';
-        // document.location.replace("/");
+  // update state based on register form input changes
+  const handleRegisterFormChange = (event) => {
+    const { name, value } = event.target;
+
+    setRegisterFormState({
+      ...registerFormState,
+      [name]: value,
+    });
+  };
+
+  // submit register form
+  const handleRegisterFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { email, password, confirmPassword } = registerFormState;
+
+      const emailIsValid = await validateEmail(email);
+
+      if (!emailIsValid) {
+        setRegisterErrorMessage('Please enter a valid email address');
       } else {
-        document.querySelector('#register-error-message').innerHTML = 'User already exists.';
-      }
+        if (password.length < 8) {
+          setRegisterErrorMessage('Password must be at least 8 characters long');
 
-    } else {
-      document.querySelector('#register-error-message').innerHTML = 'Please fill all fields.';
+        } else if (password !== confirmPassword) {
+          setRegisterErrorMessage('Passwords do not match');
+
+        } else {
+
+          const registerData = {
+            email: email,
+            password: password
+          };
+
+          fetch('/api/users', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(registerData)
+          })
+            .then(response => {
+              if (response.ok) setRegisterErrorMessage('You have registered successfully!');
+              else setRegisterErrorMessage('User already exists!');
+            })
+            .catch(err => console.error(err));
+        }
+      }
+    } catch (err) {
+      console.error(err);
     }
-  }
+  };
+
+  // async function registerHandler(event) {
+  //   event.preventDefault();
+
+  //   const email = document.querySelector("#register-email").value.trim();
+  //   console.log(email);
+  //   const password = document.querySelector("#register-password").value.trim();
+  //   console.log(password);
+  //   const confirmPassword = document.querySelector('#register-confirm-password').value.trim();
+  //   console.log(confirmPassword);
+  //   let response = [];
+
+  //   if (password.length < 8) {
+  //     document.querySelector('#register-error-message').innerHTML = 'Password must be at least 8 characters long';
+
+  //   } else if (password !== confirmPassword) {
+  //     document.querySelector('#register-error-message').innerHTML = 'Password does not match';
+
+  //   } else if (email && password) {
+
+  //     response = await fetch("/api/users", {
+  //       method: "post",
+  //       body: JSON.stringify({
+  //         email,
+  //         password,
+  //       }),
+  //       headers: { "Content-Type": "application/json" },
+  //     });
+  //     console.log(response);
+
+  //     // check the response status
+  //     if (response.ok) {
+  //       document.querySelector('#register-error-message').innerHTML = 'You have successfully signed up';
+  //       // document.location.replace("/");
+  //     } else {
+  //       document.querySelector('#register-error-message').innerHTML = 'User already exists.';
+  //     }
+
+  //   } else {
+  //     document.querySelector('#register-error-message').innerHTML = 'Please fill all fields.';
+  //   }
+  // }
 
   return (
     <main className='home'>
@@ -52,43 +146,44 @@ function Home() {
         <h1>Home</h1>
 
         <h2>Login:</h2>
-        <form className="login">
-          <label forhtml="email">Email:</label>
+        <form onSubmit={ handleLoginFormSubmit } className="login">
+          <label forhtml="loginEmail">Email:</label>
           <br />
-          <input type="text" placeholder="Enter your email address" autoComplete='email' name="email" required />
+          <input onChange={ handleLoginFormChange } type="text" placeholder="Enter your email address" autoComplete='email' name="loginEmail" required />
           <br />
 
-          <label forhtml="password">Password:</label>
+          <label forhtml="loginPassword">Password:</label>
           <br />
-          <input type="password" placeholder="Enter password" name="password" autoComplete='current-password' required />
+          <input onChange={ handleLoginFormChange } type="password" placeholder="Enter password" name="loginPassword" autoComplete='current-password' required />
           <br />
 
           <label id='remember-id'>Remember me?</label>
-          <input id='remember' type="checkbox" name="remember" />
+          <input onClick={ handleLoginFormChange } id='remember' type="checkbox" name="loginRememberMe" defaultChecked={ loginFormState.loginRememberMe } />
           <button type="submit">Login</button>
           <br />
+          <p className='errorMessages' id='loginErrorMessage'>{ loginErrorMessage }</p>
         </form>
 
         <h2>Don't have an account?</h2>
         <h3>Register now!</h3>
-        <form className="register">
+        <form onSubmit={ handleRegisterFormSubmit } className="register">
           <label forhtml="email">Email:</label>
           <br />
-          <input id='register-email' type="text" placeholder="Enter your email address" name="email" autoComplete='email' required />
+          <input onChange={ handleRegisterFormChange } id='registerEmail' type="text" placeholder="Enter your email address" name="email" autoComplete='email' required />
           <br />
 
           <label forhtml="password">Password:</label>
           <br />
-          <input id='register-password' type="password" placeholder="Enter password" name="password" autoComplete='new-password' required />
+          <input onChange={ handleRegisterFormChange } id='registerPassword' type="password" placeholder="Enter password" name="password" autoComplete='new-password' required />
           <br />
 
           <label forhtml="confirm-password">Confirm Password:</label>
           <br />
-          <input id='register-confirm-password' type="password" placeholder="Enter password again" name="confirm-password" autoComplete='new-password' required />
+          <input onChange={ handleRegisterFormChange } id='registerConfirmPassword' type="password" placeholder="Enter password again" name="confirmPassword" autoComplete='new-password' required />
           <br />
-          <button id='register-btn' type="submit" onSubmit={ registerHandler }>Register</button>
+          <button id='registerBtn' type="submit" >Register</button>
 
-          <p id='register-error-message'></p>
+          <p className='errorMessages' id='registerErrorMessage'>{ registerErrorMessage }</p>
         </form>
       </section>
     </main>

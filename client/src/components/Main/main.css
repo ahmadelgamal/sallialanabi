@@ -109,9 +109,11 @@ ol {
 remember {
   width: 20%;
 }
-.home .error-message p {
-  color: var(--gold-d3);
+.home .errorMessages {
+  margin-top: 10px;
   font-weight: 700;
+  text-align: center;
+  color: var(--color-gold-d3);
 }
 /* ends Home component styles */
 

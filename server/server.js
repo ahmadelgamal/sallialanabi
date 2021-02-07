@@ -10,8 +10,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 //  routes comes after: app.use(bodyParser.json());
 app.use(routes);
 
@@ -34,7 +34,7 @@ app.get('*', (req, res) => {
 // comes after serving static assets
 const sess = {
   secret: process.env.AUTH_SECRET,
-  cookie: {},
+  cookie: { maxAge: 1000 * 60 * 60 * 24 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
