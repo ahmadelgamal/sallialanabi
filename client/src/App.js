@@ -21,7 +21,7 @@ import FAQs from './pages/LoggedOut/Main/FAQs';
 
 import Error_404 from './pages/LoggedOut/Main/Error_404';
 
-import Footer from './components/Footer';
+import Footer from './pages/LoggedOut/Footer';
 
 function App() {
 
