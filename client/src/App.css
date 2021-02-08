@@ -14,3 +14,441 @@ main {
   padding: 40px 0;
   color: var(--color-deep-orange);
 }
+
+/* starts mobile screen styling (width < 768px) */
+/* starts common styles */
+main {
+  background-color: var(--color-blue-grey-l5);
+}
+
+.container {
+  margin: 2vh 10vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+label,
+th {
+  font-weight: 700;
+}
+p,
+li,
+input,
+button,
+td,
+td button {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--color-blue-grey-d4);
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--color-light-blue-d4);
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--color-gold-d3);
+  text-align: center;
+}
+
+h4,
+ul,
+label,
+ol {
+  font-size: 18px;
+  color: var(--color-blue-grey-d4);
+}
+
+h5 {
+  font-size: 17px;
+  color: var(--color-light-blue-d4);
+  text-align: center;
+}
+
+h6 {
+  font-size: 16px;
+  color: var(--color-gold-d2);
+}
+
+p,
+li,
+input,
+button,
+th,
+td,
+td button {
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 0px;
+  width: 150px;
+  color: var(--color-blue-grey-l5);
+  border-radius: 10px;
+}
+
+ul,
+ol {
+  margin-left: 5vw;
+}
+/* ends common styles */
+
+/* starts Admin component styles */
+.admin li {
+  list-style-type: none;
+}
+.admin li button {
+  color:black;
+}
+/* ends Admin component styles */
+
+/* starts Home component styles */
+.home button {
+  background-color: var(--color-light-blue-d4);
+  margin-top: 10px;
+}
+.home input {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: 1px solid var(--color-light-blue-d4);
+  border-radius: 10px;
+  width: 100%;
+}
+#remember-id {
+  margin: 10px 0;
+}
+#remember {
+  width: 20%;
+}
+.home .errorMessages {
+  margin-top: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-gold-d3);
+}
+
+.home .registration {
+  margin-top: 40px;
+}
+/* ends Home component styles */
+
+/* starts Contact component styles */
+#contact-form {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  border: 5px solid var(--color-light-blue-d4);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid var(--color-blue-grey-d4);
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.contacts button {
+  background-color: var(--color-light-blue-d4);
+}
+
+#contact-form-error-message {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* ends Contact component styles */
+
+/* starts Profile component styles */
+.profile h5 span {
+  color: var(--color-black);
+}
+.profile .btn-container {
+  display: flex;
+  flex-direction: column;
+}
+.profile .btn-container button {
+  margin-top: 20px;
+  width: 100%;
+}
+.profile .btn-container button:nth-of-type(1) {
+  background-color: var(--color-light-blue-d4);
+}
+.profile .btn-container button:nth-of-type(2) {
+  background-color: var(--color-blue-grey-l5);
+  color: var(--color-black);
+  border: 2px solid var(--color-light-blue-d4);
+}
+.profile .btn-container button:nth-of-type(3) {
+  background-color: var(--color-gold-d2);
+}
+.profile .scroll {
+  overflow: auto;
+}
+.profile table {
+  width: 100%;
+  border: 3px solid var(--color-light-blue-d4);
+  border-radius: 10px;
+  background-color: var(--color-blue-grey-l5);
+}
+.profile tr:first-of-type > th {
+  border-radius: 7px 0 0 0;
+}
+.profile tr:last-of-type > th {
+  border-radius: 0 0 0 7px;
+}
+.profile tr:first-of-type > td:last-of-type {
+  border-radius: 0 7px 0 0;
+}
+.profile tr:last-of-type > td:last-of-type {
+  border-radius: 0 0 7px 0;
+}
+.profile th {
+  padding: 0 10px;
+  width: 20vw;
+  background-color: var(--color-light-blue-d4);
+  color: var(--color-blue-grey-l5);
+  border: none;
+  font-weight: 700;
+  text-align: left;
+}
+.profile td {
+  padding: 0 10px;
+  text-align: left;
+  border: 1px solid var(--color-light-blue-d4);
+  overflow-wrap: break-word;
+}
+.profile td button {
+  width: 100%;
+  font-weight: 700;
+}
+.profile td:last-of-type {
+  background-color: var(--color-gold-d2);
+  border: none;
+}
+.profile td:last-of-type button {
+  color: var(--color-blue-grey-l5);
+}
+/* ends Profile component styles */
+
+/* starts Ramadan component styles */
+.ramadan .header {
+  margin-bottom: 20px;
+}
+.ramadan article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.ramadan article:nth-of-type(odd) {
+  background-color: var(--color-light-blue-d2);
+}
+.ramadan article:nth-of-type(even) {
+  background-color: var(--color-gold-d2);
+}
+.ramadan article h3 {
+  margin-top: 0px;
+}
+.ramadan article h3,
+.ramadan article p,
+.ramadan article label {
+  color: var(--color-white);
+}
+.ramadan article .prayer label {
+  text-align: center;
+}
+.ramadan article p {
+  font-size: 16px;
+}
+/* ends Ramadan component styles */
+.activities h2 {
+  text-align: center;
+}
+/* ends mobile screen styling (width < 768px) */
+
+/* starts tablet screen styling (768px <= width <= 992px) */
+@media only screen and (min-width: 768px) {
+  /* starts common styles */
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4,
+  label,
+  ul,
+  ol {
+    font-size: 21px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  p,
+  li,
+  input,
+  button,
+  th,
+  td,
+  td button {
+    font-size: 18px;
+  }
+  /* ends common styles */
+
+  /* starts Home component styles */
+  .home input {
+    padding: 10px 20px;
+  }
+  /* ends Home component styles */
+
+  /* starts Contact component styles */
+  #contact-form input,
+  #contact-form textarea,
+  #contact-form-error-message {
+    font-size: 20px;
+  }
+  /* ends Contact component styles */
+
+  /* starts Profile component styles */
+  .profile .btn-container {
+    flex-direction: row;
+  }
+  .profile .btn-container button {
+    padding: 10px 0;
+    width: 23vw;
+  }
+  .profile .btn-container button:nth-of-type(2) {
+    margin-left: 5.5vw;
+    margin-right: 5.5vw;
+  }
+  /* ends Profile component styles */
+
+  /* starts Ramadan component styles */
+  .ramadan .container .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ramadan article .flex-row {
+    justify-content: space-between;
+  }
+  .ramadan .container .header {
+    justify-content: space-evenly;
+  }
+  .ramadan article {
+    width: 45%;
+  }
+  /* ends Ramadan component styles */
+}
+/* ends tablet screen styling (768px <= width <= 992px) */
+
+/* starts desktop screen styling (992px <= width <= 1200px) */
+@media only screen and (min-width: 992px) {
+  /* starts common styles */
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4,
+  label,
+  ul,
+  ol {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  p,
+  li,
+  input,
+  button,
+  th,
+  td,
+  td button {
+    font-size: 20px;
+  }
+  /* ends common styles */
+}
+/* ends desktop screen styling (992px <= width <= 1200px) */
+
+/* starts large desktop screen styling (1200px <= width) */
+@media only screen and (min-width: 1200px) {
+  /* starts common styles */
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4,
+  label,
+  ul,
+  ol {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 24px;
+  }
+  p,
+  li,
+  input,
+  button,
+  th,
+  td,
+  td button {
+    font-size: 24px;
+  }
+  /* ends common styles */
+
+  /* starts Ramadan component styles */
+  .ramadan article {
+    width: 30%;
+  }
+  /* ends Ramadan component styles */
+}
+/* ends large desktop screen styling (1200px <= width) */

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../../../utils/helpers';
 // import Auth from '../../utils/auth';
 
 function Home() {
@@ -93,7 +93,7 @@ function Home() {
             .then(response => {
               if (response.ok) {
                 setRegisterErrorMessage('You have registered successfully!');
-                setTimeout(function () { setRegisterErrorMessage(''); }, 3000);
+                setTimeout(() => setRegisterErrorMessage(''), 3000);
               }
               else setRegisterErrorMessage('User already exists!');
             })
@@ -108,7 +108,7 @@ function Home() {
   return (
     <main className='home'>
       <section className="container">
-        <h1>Home</h1>
+        <h1>Salli Ala Nabi</h1>
 
         <h2>Login:</h2>
         <form onSubmit={ handleLoginFormSubmit } className="login">

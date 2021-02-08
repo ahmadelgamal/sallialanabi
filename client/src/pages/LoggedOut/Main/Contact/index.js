@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { validateEmail } from '../../../utils/helpers';
+import { validateEmail } from '../../../../utils/helpers';
 import emailjs from 'emailjs-com';
 
 function Contact() {
@@ -62,7 +62,7 @@ function Contact() {
         })
         .then(() => {
           setErrorMessage('Message sent successfully!');
-          setTimeout(function () { setErrorMessage(''); }, 3000);
+          setTimeout(() => setErrorMessage(''), 3000);
         })
         .then(() => {
           event.target.querySelector("input[name='name'").value = "";

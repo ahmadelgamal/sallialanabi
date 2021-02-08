@@ -1,0 +1,202 @@
+/* starts mobile screen styling (width < 768px) */
+.navbar {
+  display: flex;
+  position: fixed;
+  padding: 0 10vw;
+  z-index: 99;
+  width: 100vw;
+  height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light-blue-d4);
+}
+/* makes up for navbar being position fixed */
+.push-content-under-navbar {
+  height: 45px;
+}
+.menu-bars,
+.menu-times,
+.menu-plus {
+  color: var(--color-blue-grey-l5);
+  background: none;
+  font-size: 23px;
+  transform: translateY(2px);
+}
+
+#logo {
+  color: var(--color-blue-grey-l5);
+  font-size: 27px;
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.nav-menu {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: -100%;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-light-blue-d4);
+  opacity: 0.9;
+  transition: 500ms;
+  overflow: scroll;
+}
+.nav-menu.active {
+  left: 0;
+  transition: 500ms;
+}
+
+.right-side-layer.active {
+  display: none;
+}
+
+.nav-menu-items {
+  margin-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+}
+
+.nav-text {
+  height: 50px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.nav-text:hover {
+  background-color: var(--color-blue-grey-l5);
+}
+
+.nav-text:hover a,
+.nav-text:hover span {
+  color: var(--color-blue-d4);
+  font-weight: 700;
+}
+
+.nav-text a {
+  display: flex;
+  padding: 0 5vw;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--color-blue-grey-l5);
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.nav-text a.active {
+  background-color: var(--color-gold-d2);
+  color: var(--color-blue-d4);
+}
+
+.nav-text a.active span {
+  font-weight: 700;
+}
+
+.nav-text span {
+  margin-left: 16px;
+}
+
+#app-name {
+  color: var(--color-blue-grey-l5);
+  font-size: 20px;
+}
+/* ends mobile screen styling (width < 768px) */
+
+/* starts tablet screen styling (768px <= width <= 992px) */
+@media only screen and (min-width: 768px) {
+  .navbar,
+  .push-content-under-navbar,
+  .nav-text {
+    height: 47px;
+  }
+
+  .menu-bars,
+  .menu-times {
+    font-size: 25px;
+  }
+
+  #app-name {
+    font-size: 23px;
+  }
+
+  #logo {
+    font-size: 31px;
+  }
+
+  .nav-menu {
+    width: 50vw;
+  }
+  .right-side-layer.active {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: transparent;
+  }
+
+  .nav-text {
+    margin-top: 10px;
+  }
+
+  .nav-text a {
+    font-size: 21px;
+  }
+}
+/* ends tablet screen styling (768px <= width <= 992px) */
+
+/* starts desktop screen styling (992px <= width <= 1200px) */
+@media only screen and (min-width: 992px) {
+  .navbar,
+  .push-content-under-navbar,
+  .nav-text {
+    height: 49px;
+  }
+
+  .menu-bars,
+  .menu-times {
+    font-size: 27px;
+    transform: translateY(3px);
+  }
+
+  #logo {
+    font-size: 35px;
+    transform: translateY(-5px);
+  }
+
+  .nav-text {
+    margin-top: 20px;
+  }
+
+  .nav-text a {
+    font-size: 23px;
+  }
+}
+/* ends desktop screen styling (992px <= width <= 1200px) */
+
+/* starts large desktop screen styling (1200px <= width) */
+@media only screen and (min-width: 1200px) {
+  .navbar,
+  .push-content-under-navbar,
+  .nav-text {
+    height: 50px;
+  }
+
+  .menu-bars,
+  .menu-times {
+    font-size: 29px;
+  }
+
+  #app-name {
+    font-size: 25px;
+  }
+
+  #logo {
+    font-size: 40px;
+  }
+}
+/* ends large desktop screen styling (1200px <= width) */
