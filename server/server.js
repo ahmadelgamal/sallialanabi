@@ -1,26 +1,31 @@
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-const session = require('express-session');
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./routes');
 require('dotenv').config();
+const { authMiddleware } = require('./utils/auth');
+// const session = require('express-session');
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//  routes comes after: app.use(bodyParser.json());
-app.use(routes);
+app.use(routes); // routes comes after bodyParser
 
-// turns on connection to db and server
-sequelize
-  .sync({ force: false })
-  .then(() => {
-    app.listen(PORT, () => console.log('App listening on port: ', PORT));
-  });
+// // comes after serving static assets
+// const sess = {
+//   secret: process.env.AUTH_SECRET,
+//   cookie: { maxAge: 1000 * 60 * 60 * 24 },
+//   resave: false,
+//   saveUninitialized: true,
+//   store: new SequelizeStore({
+//     db: sequelize
+//   })
+// };
+// app.use(session(sess));
 
 // serves up static assets
 if (process.env.NODE_ENV === 'production') {
@@ -31,14 +36,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-// comes after serving static assets
-const sess = {
-  secret: process.env.AUTH_SECRET,
-  cookie: { maxAge: 1000 * 60 * 60 * 24 },
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
-};
-app.use(session(sess));
+// turns on connection to db and server
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    app.listen(PORT, () => console.log('App listening on port: ', PORT));
+  });

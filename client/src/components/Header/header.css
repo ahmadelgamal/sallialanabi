@@ -39,7 +39,7 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--color-light-blue-d4);
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 500ms;
   overflow: scroll;
 }

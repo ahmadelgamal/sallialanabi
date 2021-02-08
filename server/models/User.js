@@ -19,6 +19,7 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
       unique: true,
       validate: {
@@ -31,6 +32,27 @@ User.init(
       validate: {
         len: [8]
       }
+    },
+    username: {
+      type: DataTypes.STRING(32),
+      unique: true,
+      allowNull: true
+    },
+    firstname: {
+      type: DataTypes.STRING(64),
+      allowNull: true
+    },
+    lastname: {
+      type: DataTypes.STRING(64),
+      allowNull: true
+    },
+    gender: {
+      type: DataTypes.ENUM('Male', 'Female'),
+      allowNull: true
+    },
+    birthdate: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   },
   {

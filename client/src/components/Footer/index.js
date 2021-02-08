@@ -6,6 +6,9 @@ function Footer() {
   return (
     <footer>
       <div className='footer-nav flex'>
+        <NavLink exact to='/'>
+          Home
+        </NavLink>
         <NavLink exact to='/about'>
           About
         </NavLink>

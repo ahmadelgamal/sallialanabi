@@ -1,5 +1,13 @@
-// const { User, Form, Action } = require('../models');
 const User = require('../models/User');
+// const { User, Form, Action } = require('../models');
+
+exports.user_list = (req, res) => {
+  console.log('=============== READ All Users ===============');
+  User
+    .findAll({ attributes: { exclude: ['password'] } })
+    .then(users => res.json(users))
+    .catch(error => res.status(500).json(error));
+};
 
 exports.user_create = (req, res) => {
   console.log('=============== CREATE User ===============');
@@ -25,12 +33,43 @@ exports.user_create = (req, res) => {
     });
 };
 
-exports.user_list = (req, res) => {
-  console.log('=============== READ All Users ===============');
+exports.user_login = (req, res) => {
+  console.log('=============== LOGIN User ===============');
   User
-    .findAll({ attributes: { exclude: ['password'] } })
-    .then(users => res.json(users))
-    .catch(error => res.status(500).json(error));
+    .findOne({ where: { email: req.body.email } })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(400).json({ message: 'No user with that email address!' });
+        return;
+      }
+
+      const validPassword = dbUserData.checkPassword(req.body.password);
+      console.log('Is password valid: ', validPassword);
+
+      if (!validPassword) return res.status(400).json({ message: 'Incorrect password!' });
+
+      // console.log(req.session);
+
+      // req.session.save(() => {
+      //   req.session.user_id = dbUserData.id;
+      //   req.session.email = dbUserData.email;
+      //   req.session.loggedIn = true;
+
+      // res.json({ user: dbUserData, message: 'You are now logged in!' });
+      // });
+    });
+};
+
+exports.user_logout = (req, res) => {
+  console.log('=============== LOGOUT User ===============');
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 };
 
 exports.user_detail = (req, res) => {
@@ -65,45 +104,6 @@ exports.user_update = (req, res) => {
       else res.json(dbArray[1][0]);
     })
     .catch(error => res.status(500).json(error));
-};
-
-exports.user_login = (req, res) => {
-  console.log('=============== LOGIN User ===============');
-  User
-    .findOne({ where: { username: req.body.username } })
-    .then(dbUserData => {
-      if (!dbUserData) {
-        res.status(400).json({ message: 'Username does not exist!' });
-        return;
-      }
-
-      const validPassword = dbUserData.checkPassword(req.body.password);
-
-      if (!validPassword) {
-        res.status(400).json({ message: 'Incorrect password!' });
-        return;
-      }
-
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
-
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
-      });
-    });
-};
-
-exports.user_logout = (req, res) => {
-  console.log('=============== LOGOUT User ===============');
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  }
-  else {
-    res.status(404).end();
-  }
 };
 
 exports.user_delete = (req, res) => {

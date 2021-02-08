@@ -18,28 +18,32 @@ function Home() {
       ...loginFormState,
       [name]: value,
     });
-
-    console.log(name, value);
   };
 
   // submit login form
-  const handleLoginFormSubmit = async (event) => {
+  const handleLoginFormSubmit = (event) => {
     event.preventDefault();
 
-    const { email, password, rememberMe } = loginFormState;
+    const { loginEmail, loginPassword, loginRememberMe } = loginFormState;
 
-    console.log(loginFormState);
-    console.log(email);
-    console.log(password);
-    console.log(rememberMe);
+    // @TODO: add rememberMe to loginData
+    const loginData = {
+      email: loginEmail,
+      password: loginPassword
+    };
 
-    setLoginErrorMessage('Ok');
+    console.log(loginData);
 
-    // if username is not found
-    //   setLoginErrorMessage('Username not found');
-
-    // if password is incorrect
-    //   setLoginErrorMessage('Please check your password');
+    fetch('/api/users/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(loginData)
+    })
+      .then(response => {
+        if (response.ok) setLoginErrorMessage('Login successful!');
+        else setLoginErrorMessage('Please check the email and password!');
+      })
+      .catch(err => console.error(err));
   };
 
   // register form
@@ -81,13 +85,16 @@ function Home() {
             password: password
           };
 
-          fetch('/api/users', {
+          fetch('/api/users/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(registerData)
           })
             .then(response => {
-              if (response.ok) setRegisterErrorMessage('You have registered successfully!');
+              if (response.ok) {
+                setRegisterErrorMessage('You have registered successfully!');
+                setTimeout(function () { setRegisterErrorMessage(''); }, 3000);
+              }
               else setRegisterErrorMessage('User already exists!');
             })
             .catch(err => console.error(err));
@@ -97,48 +104,6 @@ function Home() {
       console.error(err);
     }
   };
-
-  // async function registerHandler(event) {
-  //   event.preventDefault();
-
-  //   const email = document.querySelector("#register-email").value.trim();
-  //   console.log(email);
-  //   const password = document.querySelector("#register-password").value.trim();
-  //   console.log(password);
-  //   const confirmPassword = document.querySelector('#register-confirm-password').value.trim();
-  //   console.log(confirmPassword);
-  //   let response = [];
-
-  //   if (password.length < 8) {
-  //     document.querySelector('#register-error-message').innerHTML = 'Password must be at least 8 characters long';
-
-  //   } else if (password !== confirmPassword) {
-  //     document.querySelector('#register-error-message').innerHTML = 'Password does not match';
-
-  //   } else if (email && password) {
-
-  //     response = await fetch("/api/users", {
-  //       method: "post",
-  //       body: JSON.stringify({
-  //         email,
-  //         password,
-  //       }),
-  //       headers: { "Content-Type": "application/json" },
-  //     });
-  //     console.log(response);
-
-  //     // check the response status
-  //     if (response.ok) {
-  //       document.querySelector('#register-error-message').innerHTML = 'You have successfully signed up';
-  //       // document.location.replace("/");
-  //     } else {
-  //       document.querySelector('#register-error-message').innerHTML = 'User already exists.';
-  //     }
-
-  //   } else {
-  //     document.querySelector('#register-error-message').innerHTML = 'Please fill all fields.';
-  //   }
-  // }
 
   return (
     <main className='home'>
