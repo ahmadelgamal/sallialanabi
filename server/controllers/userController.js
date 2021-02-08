@@ -44,9 +44,10 @@ exports.user_login = (req, res) => {
       }
 
       const validPassword = dbUserData.checkPassword(req.body.password);
-      console.log('Is password valid: ', validPassword);
+      // console.log('Is password valid: ', validPassword);
 
       if (!validPassword) return res.status(400).json({ message: 'Incorrect password!' });
+      else return res.sendStatus(200);
 
       // console.log(req.session);
 

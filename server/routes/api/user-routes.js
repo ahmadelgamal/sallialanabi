@@ -2,8 +2,7 @@ const router = require('express').Router();
 const user_controller = require('../../controllers/userController');
 
 router
-  .route('/')
-  .get(user_controller.user_list) // read all
+  .get('/', user_controller.user_list) // read all
 
 router
   .post('/register', user_controller.user_create); // create one

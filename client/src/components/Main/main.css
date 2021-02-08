@@ -104,9 +104,8 @@ ol {
 }
 #remember-id {
   margin: 10px 0;
-  width: 50%;
 }
-remember {
+#remember {
   width: 20%;
 }
 .home .errorMessages {
@@ -114,6 +113,10 @@ remember {
   font-weight: 700;
   text-align: center;
   color: var(--color-gold-d3);
+}
+
+.home .registration {
+  margin-top: 40px;
 }
 /* ends Home component styles */
 

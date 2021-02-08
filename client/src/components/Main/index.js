@@ -32,7 +32,7 @@ function Home() {
       password: loginPassword
     };
 
-    console.log(loginData);
+    // console.log(loginData);
 
     fetch('/api/users/login', {
       method: 'POST',
@@ -125,10 +125,11 @@ function Home() {
           <label id='remember-id'>Remember me?</label>
           <input onClick={ handleLoginFormChange } id='remember' type="checkbox" name="loginRememberMe" defaultChecked={ loginFormState.loginRememberMe } />
           <button type="submit">Login</button>
-          <br />
           <p className='errorMessages' id='loginErrorMessage'>{ loginErrorMessage }</p>
         </form>
+      </section>
 
+      <section className="container registration">
         <h2>Don't have an account?</h2>
         <h3>Register now!</h3>
         <form onSubmit={ handleRegisterFormSubmit } className="register">

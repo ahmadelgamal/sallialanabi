@@ -39,11 +39,11 @@ User.init(
       allowNull: true
     },
     firstname: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.STRING(32),
       allowNull: true
     },
     lastname: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.STRING(32),
       allowNull: true
     },
     gender: {
