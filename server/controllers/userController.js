@@ -18,14 +18,14 @@ exports.user_create = (req, res) => {
     })
     .then(user => {
       res.json(user);
-      // console.log('user: ', user);
-      // console.log('request in controller: ', req);
+      console.log('user: ', user);
+      console.log('request in controller: ', req);
 
-      // req.session.save(() => {
-      //   req.session.user_id = user.id;
-      //   req.session.email = user.email;
-      //   req.session.loggedIn = true;
-      // });
+      req.session.save(() => {
+        req.session.user_id = user.id;
+        req.session.email = user.email;
+        req.session.loggedIn = true;
+      });
     })
     .catch(error => {
       console.error('error: ', error);
@@ -38,26 +38,19 @@ exports.user_login = (req, res) => {
   User
     .findOne({ where: { email: req.body.email } })
     .then(dbUserData => {
-      if (!dbUserData) {
-        res.status(400).json({ message: 'No user with that email address!' });
-        return;
-      }
+      if (!dbUserData) return res.status(401).json({ message: 'No user with that email address!' });
 
       const validPassword = dbUserData.checkPassword(req.body.password);
-      // console.log('Is password valid: ', validPassword);
 
-      if (!validPassword) return res.status(400).json({ message: 'Incorrect password!' });
-      else return res.sendStatus(200);
+      if (!validPassword) return res.status(401).json({ message: 'Incorrect password!' });
 
-      // console.log(req.session);
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.email = dbUserData.email;
+        req.session.loggedIn = true;
 
-      // req.session.save(() => {
-      //   req.session.user_id = dbUserData.id;
-      //   req.session.email = dbUserData.email;
-      //   req.session.loggedIn = true;
-
-      // res.json({ user: dbUserData, message: 'You are now logged in!' });
-      // });
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
+      });
     });
 };
 

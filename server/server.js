@@ -1,31 +1,29 @@
+require('dotenv').config();
+const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const bodyParser = require('body-parser');
-const path = require('path');
-const sequelize = require('./config/connection');
 const routes = require('./routes');
-require('dotenv').config();
-const { authMiddleware } = require('./utils/auth');
-// const session = require('express-session');
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const PORT = process.env.PORT || 4000;
 
+const sess = {
+  secret: process.env.AUTH_SECRET,
+  cookie: {},
+  // cookie: { maxAge: 1000 * 60 * 60 * 24 },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+app.use(session(sess));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(routes); // routes comes after bodyParser
-
-// // comes after serving static assets
-// const sess = {
-//   secret: process.env.AUTH_SECRET,
-//   cookie: { maxAge: 1000 * 60 * 60 * 24 },
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
-// app.use(session(sess));
+app.use(routes); // routes comes after bodyParser and after session
 
 // serves up static assets
 if (process.env.NODE_ENV === 'production') {

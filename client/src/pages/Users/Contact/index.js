@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { validateEmail } from '../../../../utils/helpers';
+import { validateEmail } from '../../../utils/helpers';
 import emailjs from 'emailjs-com';
 
 function Contact() {
 
   document.title = 'Contact - Salli Ala Nabi';
-
 
   useEffect(() => {
     window.scrollTo(0, 0);
