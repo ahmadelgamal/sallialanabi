@@ -62,7 +62,7 @@ exports.user_logout = (req, res) => {
     });
   }
   else {
-    res.status(404).end();
+    res.status(401).end();
   }
 };
 

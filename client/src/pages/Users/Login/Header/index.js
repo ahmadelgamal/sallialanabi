@@ -34,11 +34,6 @@ function Header() {
           &#xFDFA;
             </NavLink>
 
-        <Link
-          to="#"
-          className="menu-plus">
-          <FaIcons.FaPlus />
-        </Link>
       </div>
 
       <div className="push-content-under-navbar"></div>

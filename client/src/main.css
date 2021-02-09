@@ -113,9 +113,10 @@ ol {
   width: 100%;
 }
 #remember-id {
-  margin: 10px 0;
+  margin-left: 10px 0;
 }
 #remember {
+  margin-left: 10px;
   width: 20%;
 }
 .home .errorMessages {

@@ -39,12 +39,12 @@ export const SidebarData =
       icon: <FaIcons.FaQuestion />,
       className: 'nav-text'
     },
-    {
-      title: 'Logout',
-      path: '/logout',
-      icon: <FaIcons.FaSignOutAlt />,
-      className: 'nav-text'
-    }
+    // {
+    //   title: 'Logout',
+    //   path: '/api/users/logout',
+    //   icon: <FaIcons.FaSignOutAlt />,
+    //   className: 'nav-text'
+    // }
     // {
     //   title: 'Home',
     //   path: '/',

@@ -40,7 +40,10 @@ function Home() {
       body: JSON.stringify(loginData)
     })
       .then(response => {
-        if (response.ok) setLoginErrorMessage('Login successful!');
+        if (response.ok) {
+          setLoginErrorMessage('Login successful!');
+          window.location = '/login';
+        }
         else setLoginErrorMessage('Please check the email and password!');
       })
       .catch(err => console.error(err));

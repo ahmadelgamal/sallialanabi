@@ -2,35 +2,23 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 
 export const SidebarData =
-  [
+[
     {
-      title: 'Profile',
-      path: '/profile',
-      icon: <FaIcons.FaUser />,
+      title: 'Home',
+      path: '/',
+      icon: <FaIcons.FaMosque />,
       className: 'nav-text'
     },
     {
-      title: 'Set Goals',
-      path: '/goals',
-      icon: <FaIcons.FaBullseye />,
+      title: 'About',
+      path: '/about',
+      icon: <FaIcons.FaInfo />,
       className: 'nav-text'
     },
     {
-      title: 'Record Activities',
-      path: '/activities',
-      icon: <FaIcons.FaPray />,
-      className: 'nav-text'
-    },
-    {
-      title: 'Track Performance',
-      path: '/performance',
-      icon: <FaIcons.FaChartLine />,
-      className: 'nav-text'
-    },
-    {
-      title: 'Support Group',
-      path: '/support',
-      icon: <FaIcons.FaUsers />,
+      title: 'Contact',
+      path: '/contact',
+      icon: <FaIcons.FaRegEdit />,
       className: 'nav-text'
     },
     {
@@ -40,27 +28,15 @@ export const SidebarData =
       className: 'nav-text'
     },
     {
-      title: 'Logout',
-      path: '/logout',
-      icon: <FaIcons.FaSignOutAlt />,
+      title: 'Register',
+      path: '/register',
+      icon: <FaIcons.FaUserPlus />,
+      className: 'nav-text'
+    },
+    {
+      title: 'Login',
+      path: '/login',
+      icon: <FaIcons.FaSignInAlt />,
       className: 'nav-text'
     }
-    // {
-    //   title: 'Home',
-    //   path: '/',
-    //   icon: <FaIcons.FaMosque />,
-    //   className: 'nav-text'
-    // },
-    // {
-    //   title: 'About',
-    //   path: '/about',
-    //   icon: <FaIcons.FaInfo />,
-    //   className: 'nav-text'
-    // },
-    // {
-    //   title: 'Contact',
-    //   path: '/contact',
-    //   icon: <FaIcons.FaRegEdit />,
-    //   className: 'nav-text'
-    // }
   ];

@@ -9,6 +9,19 @@ function Header() {
   const showSideBar = () => setSidebar(true);
   const hideSidebar = () => setSidebar(false);
 
+  function logout() {
+    fetch('/api/users/logout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then((response) => {
+        if (response.status === 204) console.log('Logged out successfully!');
+        else console.log('Error logging out. You are probably not logged in to begin with!');
+        window.location = '/';
+      })
+      .catch(err => console.error(err));
+  }
+
   return (
     <header>
       <div className="navbar">
@@ -60,6 +73,8 @@ function Header() {
               </li>
             );
           }) }
+
+          <li className='nav-text'><Link onClick={ logout }><FaIcons.FaSignOutAlt /><span>Logout</span></Link></li>
         </ul>
       </nav>
 
