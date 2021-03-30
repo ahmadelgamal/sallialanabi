@@ -116,7 +116,7 @@ function App() {
 
         </Switch>
 
-        <Footer />
+        <Footer user={ user } />
 
       </div >
     </Router >

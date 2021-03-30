@@ -1,11 +1,10 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Footer() {
+function AuthFooter() {
   return (
     <footer>
       <div className='footer-nav flex'>
-        <NavLink exact to='/'>
+        <NavLink exact to='/activities'>
           Home
         </NavLink>
         <NavLink exact to='/about'>
@@ -25,4 +24,4 @@ function Footer() {
   )
 };
 
-export default Footer;
+export default AuthFooter;
