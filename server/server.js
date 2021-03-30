@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const app = express();
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -21,10 +21,10 @@ const sess = {
   })
 };
 app.use(session(sess));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(routes); // routes comes after bodyParser and after session
 
 // serves up static assets

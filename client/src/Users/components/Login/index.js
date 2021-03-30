@@ -2,12 +2,17 @@ import { useState } from "react";
 import { validateEmail } from '../../../utils/helpers';
 // import Auth from '../../utils/auth';
 
-function Home() {
+function Login() {
 
-  document.title = 'Home - Salli Ala Nabi';
+  document.title = 'Login - Salli Ala Nabi';
 
   // login form
-  const [loginFormState, setLoginFormState] = useState({ loginEmail: '', loginPassword: '', loginRememberMe: false });
+  const [loginFormState, setLoginFormState] = useState(
+    {
+      loginEmail: '',
+      loginPassword: '',
+      loginRememberMe: false
+    });
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
 
   // update state based on login form input changes
@@ -117,18 +122,40 @@ function Home() {
         <form onSubmit={ handleLoginFormSubmit } className="login">
           <label forhtml="loginEmail">Email:</label>
           <br />
-          <input onChange={ handleLoginFormChange } type="text" placeholder="Enter your email address" autoComplete='email' name="loginEmail" required />
+          <input
+            onChange={ handleLoginFormChange }
+            type="text"
+            placeholder="Enter your email address"
+            autoComplete='email'
+            name="loginEmail"
+            required
+          />
           <br />
 
           <label forhtml="loginPassword">Password:</label>
           <br />
-          <input onChange={ handleLoginFormChange } type="password" placeholder="Enter password" name="loginPassword" autoComplete='current-password' required />
+          <input
+            onChange={ handleLoginFormChange }
+            type="password"
+            placeholder="Enter password"
+            name="loginPassword"
+            autoComplete='current-password'
+            required
+          />
           <br />
 
           <label id='remember-id'>Remember me?</label>
-          <input onClick={ handleLoginFormChange } id='remember' type="checkbox" name="loginRememberMe" defaultChecked={ loginFormState.loginRememberMe } />
+          <input
+            onClick={ handleLoginFormChange }
+            id='remember'
+            type="checkbox"
+            name="loginRememberMe"
+            defaultChecked={ loginFormState.loginRememberMe }
+          />
           <button type="submit">Login</button>
-          <p className='errorMessages' id='loginErrorMessage'>{ loginErrorMessage }</p>
+          <p className='errorMessages' id='loginErrorMessage'>
+            { loginErrorMessage }
+          </p>
         </form>
       </section>
 
@@ -138,25 +165,51 @@ function Home() {
         <form onSubmit={ handleRegisterFormSubmit } className="register">
           <label forhtml="email">Email:</label>
           <br />
-          <input onChange={ handleRegisterFormChange } id='registerEmail' type="text" placeholder="Enter your email address" name="email" autoComplete='email' required />
+          <input
+            onChange={ handleRegisterFormChange }
+            id='registerEmail'
+            type="text"
+            placeholder="Enter your email address"
+            name="email"
+            autoComplete='email'
+            required
+          />
           <br />
 
           <label forhtml="password">Password:</label>
           <br />
-          <input onChange={ handleRegisterFormChange } id='registerPassword' type="password" placeholder="Enter password" name="password" autoComplete='new-password' required />
+          <input
+            onChange={ handleRegisterFormChange }
+            id='registerPassword'
+            type="password"
+            placeholder="Enter password"
+            name="password"
+            autoComplete='new-password'
+            required
+          />
           <br />
 
           <label forhtml="confirm-password">Confirm Password:</label>
           <br />
-          <input onChange={ handleRegisterFormChange } id='registerConfirmPassword' type="password" placeholder="Enter password again" name="confirmPassword" autoComplete='new-password' required />
+          <input
+            onChange={ handleRegisterFormChange }
+            id='registerConfirmPassword'
+            type="password"
+            placeholder="Enter password again"
+            name="confirmPassword"
+            autoComplete='new-password'
+            required
+          />
           <br />
           <button id='registerBtn' type="submit" >Register</button>
 
-          <p className='errorMessages' id='registerErrorMessage'>{ registerErrorMessage }</p>
+          <p className='errorMessages' id='registerErrorMessage'>
+            { registerErrorMessage }
+          </p>
         </form>
       </section>
     </main>
   )
 };
 
-export default Home;
+export default Login;

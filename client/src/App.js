@@ -17,7 +17,7 @@ import Contact from './Users/components/Contact';
 import FAQs from './Users/components/FAQs';
 
 import Landing from './Users/pages/Landing';
-import Error404 from './Users/components/Error404/Error404';
+import Error404 from './Users/components/Error404';
 
 import ProtectedRoute from './Users/ProtectedRoute';
 import Dashboard from './Users/pages/Dashboard';

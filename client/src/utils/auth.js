@@ -46,7 +46,6 @@ class AuthService {
     else{
       window.location.assign('/');
     }
-    
   }
 
   logout() {
