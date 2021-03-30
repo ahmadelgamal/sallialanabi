@@ -1,5 +1,5 @@
-import AuthHeader from './P_Header';
-import UnauthHeader from './U_Header';
+import AuthHeader from './AuthHeader';
+import UnAuthHeader from './UnAuthHeader';
 
 function Header(props) {
   const isLoggedIn = props.user;
@@ -7,7 +7,7 @@ function Header(props) {
   if (isLoggedIn) {
     return <AuthHeader />;
   }
-  return <UnauthHeader />;
+  return <UnAuthHeader />;
 };
 
 export default Header;

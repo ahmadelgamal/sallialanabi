@@ -57,6 +57,10 @@ function App() {
             <Landing user={ user.toString() } handleLogin={ handleLogin } />
           </Route>
 
+          <Route exact path='/register' handleLogin={ handleLogin }>
+            <Landing user={ user.toString() } handleLogin={ handleLogin } />
+          </Route>
+
           <Route exact path='/about'>
             <About />
           </Route>

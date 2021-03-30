@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 
-function Header() {
+function UnAuthHeader() {
 
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(true);
@@ -67,4 +67,4 @@ function Header() {
   );
 };
 
-export default Header;
+export default UnAuthHeader;

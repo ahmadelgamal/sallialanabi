@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 
-function Header() {
+function AuthHeader() {
 
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(true);
@@ -40,7 +40,7 @@ function Header() {
         </Link>
 
         <NavLink
-          to="/"
+          to="/activities"
           id="logo"
           onClick={ hideSidebar }
         >
@@ -87,4 +87,4 @@ function Header() {
   );
 };
 
-export default Header;
+export default AuthHeader;
