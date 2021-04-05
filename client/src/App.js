@@ -12,12 +12,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Users/components/Header';
 import Footer from './Users/components/Footer';
 
+import Landing from './Users/pages/Landing';
+import Register from './Users/components/Register';
+import Error404 from './Users/components/Error404';
+
 import About from './Users/components/About';
 import Contact from './Users/components/Contact';
 import FAQs from './Users/components/FAQs';
-
-import Landing from './Users/pages/Landing';
-import Error404 from './Users/components/Error404';
 
 import ProtectedRoute from './Users/ProtectedRoute';
 import Dashboard from './Users/pages/Dashboard';
@@ -58,7 +59,7 @@ function App() {
           </Route>
 
           <Route exact path='/register' handleLogin={ handleLogin }>
-            <Landing user={ user.toString() } handleLogin={ handleLogin } />
+            <Register user={ user.toString() } handleLogin={ handleLogin } />
           </Route>
 
           <Route exact path='/about'>
@@ -82,31 +83,26 @@ function App() {
           <ProtectedRoute
             exact path='/profile'
             user={ user }
-            handleLogout={ handleLogout }
             component={ Profile }
           />
           <ProtectedRoute
             exact path='/goals'
             user={ user }
-            handleLogout={ handleLogout }
             component={ Goals }
           />
           <ProtectedRoute
             exact path='/activities'
             user={ user }
-            handleLogout={ handleLogout }
             component={ Activities }
           />
           <ProtectedRoute
             exact path='/performance'
             user={ user }
-            handleLogout={ handleLogout }
             component={ Performance }
           />
           <ProtectedRoute
             exact path='/support'
             user={ user }
-            handleLogout={ handleLogout }
             component={ Support }
           />
 

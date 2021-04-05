@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
+import Logo from '../../../../assets/images/logo192.png';
 
 function UnAuthHeader() {
 
@@ -26,13 +27,9 @@ function UnAuthHeader() {
           <FaIcons.FaTimes />
         </Link>
 
-        <NavLink
-          to="/"
-          id="logo"
-          onClick={ hideSidebar }
-        >
-          &#xFDFA;
-            </NavLink>
+        <NavLink to='/' id='logo' onClick={ hideSidebar }>
+          <img width='45' height='45' src={ Logo }></img>
+        </NavLink>
 
       </div>
 

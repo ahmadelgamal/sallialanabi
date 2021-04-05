@@ -24,10 +24,8 @@
 }
 
 #logo {
-  color: var(--color-blue-grey-l5);
-  font-size: 27px;
-  text-decoration: none;
-  transform: translateY(-4px);
+  height: 45px;
+  width: 45px;
 }
 
 .nav-menu {
@@ -123,7 +121,8 @@
   }
 
   #logo {
-    font-size: 31px;
+    height: 47px;
+    width: 47px;
   }
 
   .nav-menu {
@@ -164,8 +163,8 @@
   }
 
   #logo {
-    font-size: 35px;
-    transform: translateY(-5px);
+    height: 49px;
+    width: 49px;
   }
 
   .nav-text {
@@ -196,7 +195,8 @@
   }
 
   #logo {
-    font-size: 40px;
+    height: 50px;
+    width: 50px;
   }
 }
 /* ends large desktop screen styling (1200px <= width) */
