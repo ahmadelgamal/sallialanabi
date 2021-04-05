@@ -3,9 +3,9 @@ function Support() {
   document.title = 'Group Support - Salli Ala Nabi';
 
   return (
-    <div>
+    <main>
       <h1>Support Group</h1>
-    </div>
+    </main>
   )
 };
 

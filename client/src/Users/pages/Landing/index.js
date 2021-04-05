@@ -4,7 +4,7 @@ import Login from '../../components/Login';
 
 function Landing(props) {
   return (
-    <div className='Landing'>
+    <main className='Landing'>
 
       <p><Link to='/dashboard'>View Dashboard</Link></p>
       <p>Logged in status: { props.user }</p>
@@ -12,7 +12,7 @@ function Landing(props) {
 
       <Login />
 
-    </div>
+    </main>
   );
 };
 

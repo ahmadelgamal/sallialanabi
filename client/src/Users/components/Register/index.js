@@ -8,7 +8,12 @@ function Register() {
   document.title = 'Register - Salli Ala Nabi';
 
   // register form
-  const [registerFormState, setRegisterFormState] = useState({ email: '', password: '', confirmPassword: '' });
+  const [registerFormState, setRegisterFormState] = useState(
+    {
+      email: '',
+      password: '',
+      confirmPassword: ''
+    });
   const [registerErrorMessage, setRegisterErrorMessage] = useState('');
 
   // update state based on register form input changes
