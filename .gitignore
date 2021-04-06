@@ -5,6 +5,7 @@
 .eslintcache
 package-lock.json
 .env
+*.pem
 
 # folders
 node_modules
