@@ -41,7 +41,7 @@ function AuthHeader() {
         </Link>
 
         <NavLink to='/activities' id='logo' onClick={ hideSidebar }>
-          <img width='45' height='45' src={ Logo }></img>
+          <img alt='logo' width='45' height='45' src={ Logo }></img>
         </NavLink>
 
         <Link

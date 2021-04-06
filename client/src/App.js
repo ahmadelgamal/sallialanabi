@@ -51,15 +51,15 @@ function App() {
         <Switch>
 
           <Route exact path='/' handleLogin={ handleLogin }>
-            <Landing user={ user.toString() } handleLogin={ handleLogin } />
+            <Landing user={ user } handleLogin={ handleLogin } />
           </Route>
 
           <Route exact path='/login' handleLogin={ handleLogin }>
-            <Landing user={ user.toString() } handleLogin={ handleLogin } />
+            <Landing user={ user } handleLogin={ handleLogin } />
           </Route>
 
-          <Route exact path='/register' handleLogin={ handleLogin }>
-            <Register user={ user.toString() } handleLogin={ handleLogin } />
+          <Route exact path='/register'>
+            <Register />
           </Route>
 
           <Route exact path='/about'>

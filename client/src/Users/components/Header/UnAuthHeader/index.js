@@ -28,7 +28,7 @@ function UnAuthHeader() {
         </Link>
 
         <NavLink to='/' id='logo' onClick={ hideSidebar }>
-          <img width='45' height='45' src={ Logo }></img>
+          <img alt='logo' width='45' height='45' src={ Logo }></img>
         </NavLink>
 
       </div>

@@ -1,10 +1,13 @@
 function Dashboard(props) {
+  console.log(props.user);
 
   return (
-    <main className='Dashboard'>
-      <h1>Dashboard</h1>
-      <p>Logged in status: { props.user }</p>
-      <button onClick={ props.handleLogout }>Log Out</button>
+    <main className='dashboard'>
+      <div className="container">
+        <h1>Dashboard</h1>
+        <p>Logged in status: { props.user }</p>
+        <button onClick={ props.handleLogout }>Log Out</button>
+      </div>
     </main>
   );
 };

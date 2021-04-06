@@ -165,7 +165,9 @@ ol {
   font-size: 16px;
 }
 
-.contacts button {
+.contacts button,
+.landing button,
+.dashboard button {
   background-color: var(--color-light-blue-d4);
 }
 

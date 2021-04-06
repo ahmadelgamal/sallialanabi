@@ -47,7 +47,7 @@ function Login() {
       .then(response => {
         if (response.ok) {
           setLoginErrorMessage('Login successful!');
-          window.location = '/login';
+          window.location = '/profile';
         }
         else setLoginErrorMessage('Please check the email and password!');
       })
