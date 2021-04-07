@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { validateEmail } from '../../../utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 import emailjs from 'emailjs-com';
 
 function Contact() {

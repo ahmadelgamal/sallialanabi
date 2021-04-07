@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 // import Auth from '../../utils/auth';
 
-function Login() {
-
+function Login(props) {
   document.title = 'Login - Salli Ala Nabi';
 
   // login form
@@ -45,7 +44,9 @@ function Login() {
       body: JSON.stringify(loginData)
     })
       .then(response => {
+        // console.log(response);
         if (response.ok) {
+          // props.user = true;
           setLoginErrorMessage('Login successful!');
           window.location = '/profile';
         }

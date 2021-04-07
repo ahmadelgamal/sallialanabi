@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Login from '../../components/Login';
+import Login from './Login';
 
 function Landing(props) {
 
@@ -10,7 +10,7 @@ function Landing(props) {
 
       <div className="container">
         <p><Link to='/dashboard'>View Dashboard</Link></p>
-        <p>Logged in status: { props.user.toString() }</p>
+        <p>Logged in status: { props.user }</p>
         <button onClick={ props.handleLogin }>Log In</button>
 
       </div>

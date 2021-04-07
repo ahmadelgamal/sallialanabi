@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Users/components/Header';
 import Footer from './Users/components/Footer';
 
-import Landing from './Users/pages/Landing';
+import Landing from './Users/components/Landing';
 import Register from './Users/components/Register';
 import Error404 from './Users/components/Error404';
 
@@ -20,16 +20,15 @@ import About from './Users/components/About';
 import Contact from './Users/components/Contact';
 import FAQs from './Users/components/FAQs';
 
-import ProtectedRoute from './Users/ProtectedRoute';
-import Dashboard from './Users/pages/Dashboard';
-import Activities from './Users/pages/Dashboard/Activities';
-import Goals from './Users/pages/Dashboard/Goals';
-import Performance from './Users/pages/Dashboard/Performance';
-import Profile from './Users/pages/Dashboard/Profile';
-import Support from './Users/pages/Dashboard/Support';
+import ProtectedRoute from './Users/components/ProtectedRoute';
+import Dashboard from './Users/components/Dashboard';
+import Activities from './Users/components/Activities';
+import Goals from './Users/components/Goals';
+import Performance from './Users/components/Performance';
+import Profile from './Users/components/Profile';
+import Support from './Users/components/Support';
 
 function App() {
-
   const [user, setUser] = useState(false);
 
   const handleLogin = e => {
@@ -51,11 +50,11 @@ function App() {
         <Switch>
 
           <Route exact path='/' handleLogin={ handleLogin }>
-            <Landing user={ user } handleLogin={ handleLogin } />
+            <Landing user={ user.toString() } handleLogin={ handleLogin } />
           </Route>
 
           <Route exact path='/login' handleLogin={ handleLogin }>
-            <Landing user={ user } handleLogin={ handleLogin } />
+            <Landing user={ user.toString() } handleLogin={ handleLogin } />
           </Route>
 
           <Route exact path='/register'>

@@ -44,6 +44,7 @@ exports.user_login = (req, res) => {
 
       if (!validPassword) return res.status(401).json({ message: 'Incorrect password!' });
 
+      // console.log(dbUserData);
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.email = dbUserData.email;

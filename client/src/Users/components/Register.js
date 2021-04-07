@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { validateEmail } from '../../../utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 // import Auth from '../../utils/auth';
 
 function Register() {
