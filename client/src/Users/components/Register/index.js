@@ -72,11 +72,9 @@ function Register() {
   };
 
   return (
-    <main className='home'>
-      <section className="container registration">
-        <h1>Salli Ala Nabi</h1>
-
-        <h2>Register</h2>
+    <main className='register'>
+      <section className="container">
+        <h1>Register</h1>
         <form onSubmit={ handleRegisterFormSubmit } className="register">
           <label forhtml="email">Email:</label>
           <br />

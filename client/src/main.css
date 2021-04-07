@@ -109,11 +109,13 @@ ol {
 /* ends Admin component styles */
 
 /* starts Home component styles */
-.home button {
+.login button,
+.register button {
   background-color: var(--color-light-blue-d4);
   margin-top: 10px;
 }
-.home input {
+.login input,
+.register input {
   margin: 5px 0;
   padding: 5px 10px;
   border: 1px solid var(--color-light-blue-d4);
@@ -127,15 +129,12 @@ ol {
   margin-left: 10px;
   width: 20%;
 }
-.home .errorMessages {
+.login .errorMessages,
+.register .errorMessages {
   margin-top: 10px;
   font-weight: 700;
   text-align: center;
   color: var(--color-gold-d3);
-}
-
-.home .registration {
-  margin-top: 40px;
 }
 /* ends Home component styles */
 
@@ -323,7 +322,8 @@ ol {
   /* ends common styles */
 
   /* starts Home component styles */
-  .home input {
+  .login input,
+  .register input {
     padding: 10px 20px;
   }
   /* ends Home component styles */

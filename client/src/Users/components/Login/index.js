@@ -55,11 +55,9 @@ function Login() {
   };
 
   return (
-    <main className='home'>
+    <main className='login'>
       <section className="container">
-        <h1>Salli Ala Nabi</h1>
-
-        <h2>Login</h2>
+        <h1>Login</h1>
         <form onSubmit={ handleLoginFormSubmit } className="login">
           <label forhtml="loginEmail">Email:</label>
           <br />
