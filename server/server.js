@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const app = express();
+const cors = require('cors');
 // const bodyParser = require('body-parser');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
@@ -23,6 +24,7 @@ const sess = {
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 app.use(routes); // routes comes after bodyParser and after session
