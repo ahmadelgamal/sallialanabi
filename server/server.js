@@ -15,7 +15,7 @@ const sess = {
   resave: false,
   saveUninitialized: false,
   cookie: {
-    httpOnly: true,
+    // httpOnly: true,
     // secure: NODE_ENV === 'production',
     maxAge: 1000 * 60 * 60 * 24
   },
