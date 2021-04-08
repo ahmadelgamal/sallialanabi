@@ -24,17 +24,18 @@ const sess = {
   })
 };
 
-const corsObject = {
-  origin: ['http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-};
+// const corsObject = {
+//   origin: ['http://localhost:3000'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true
+// };
 
 app.disable('x-powered-by'); //hides stack to hackers
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors(corsObject));
+// app.use(cors(corsObject));
+app.use(cors());
 app.use(session(sess));
 app.use(routes);
 
