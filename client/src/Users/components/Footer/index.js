@@ -1,10 +1,8 @@
 import AuthFooter from './AuthFooter';
 import UnAuthFooter from './UnAuthFooter';
 
-function Footer(props) {
-  const isLoggedIn = props.user;
-
-  if (isLoggedIn) {
+function Footer({loggedIn}) {
+  if (loggedIn) {
     return <AuthFooter />;
   }
   return <UnAuthFooter />;

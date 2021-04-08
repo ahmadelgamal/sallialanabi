@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import Auth from '../../utils/auth';
 
-function Login(props) {
+function Login({handleLogin}) {
   document.title = 'Login - Salli Ala Nabi';
 
   // login form
@@ -44,13 +44,11 @@ function Login(props) {
       body: JSON.stringify(loginData)
     })
       .then(response => {
-        // console.log(response);
-        if (response.ok) {
-          // props.user = true;
-          setLoginErrorMessage('Login successful!');
-          window.location = '/profile';
-        }
-        else setLoginErrorMessage('Please check the email and password!');
+        return response.json();
+      })
+      .then(data => {
+        setLoginErrorMessage(data.message);
+        handleLogin();
       })
       .catch(err => console.error(err));
   };
@@ -97,7 +95,7 @@ function Login(props) {
             { loginErrorMessage }
           </p>
         </form>
-        <h3>Don't have an account? <Link to='register'>Register now!</Link></h3>
+        <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
       </section>
     </main>
   )

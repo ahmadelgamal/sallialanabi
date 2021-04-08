@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { validateEmail } from '../../utils/helpers';
 // import Auth from '../../utils/auth';
 
@@ -120,7 +120,7 @@ function Register() {
             { registerErrorMessage }
           </p>
         </form>
-        <h3>Already have an account? <Link to='login'>Login</Link></h3>
+        <h3>Already have an account? <NavLink to='/login'>Login</NavLink></h3>
       </section>
     </main>
   )

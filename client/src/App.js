@@ -12,7 +12,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Users/components/Header';
 import Footer from './Users/components/Footer';
 
-import Landing from './Users/components/Landing';
+// import Landing from './Users/components/Landing';
+import Login from './Users/components/Login';
 import Register from './Users/components/Register';
 import Error404 from './Users/components/Error404';
 
@@ -26,36 +27,41 @@ import Activities from './Users/components/Activities';
 import Goals from './Users/components/Goals';
 import Performance from './Users/components/Performance';
 import Profile from './Users/components/Profile';
-import Support from './Users/components/Support';
+// import Support from './Users/components/Support';
 
 function App() {
-  const [user, setUser] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  const handleLogin = e => {
-    e.preventDefault();
-    setUser(true);
+  const handleLogin = () => {
+    // e.preventDefault();
+    setLoggedIn(true);
+    console.log(loggedIn);
   };
 
   const handleLogout = e => {
     e.preventDefault();
-    setUser(false);
+    setLoggedIn(false);
   };
 
   return (
     <Router>
       <div className="App">
 
-        <Header user={ user } />
+        <Header loggedIn={ loggedIn } handleLogout={ handleLogout } />
 
         <Switch>
 
-          <Route exact path='/' handleLogin={ handleLogin }>
-            <Landing user={ user.toString() } handleLogin={ handleLogin } />
-          </Route>
+          <Route
+            exact path='/'
+            component={ () =>
+              <Login loggedIn={ loggedIn } handleLogin={ handleLogin } />
+            } />
 
-          <Route exact path='/login' handleLogin={ handleLogin }>
-            <Landing user={ user.toString() } handleLogin={ handleLogin } />
-          </Route>
+          <Route
+            exact path='/login'
+            component={ () =>
+              <Login loggedIn={ loggedIn } handleLogin={ handleLogin } />
+            } />
 
           <Route exact path='/register'>
             <Register />
@@ -75,35 +81,35 @@ function App() {
 
           <ProtectedRoute
             exact path='/dashboard'
-            user={ user }
+            loggedIn={ loggedIn }
             handleLogout={ handleLogout }
             component={ Dashboard }
           />
           <ProtectedRoute
             exact path='/profile'
-            user={ user }
+            loggedIn={ loggedIn }
             component={ Profile }
           />
           <ProtectedRoute
             exact path='/goals'
-            user={ user }
+            loggedIn={ loggedIn }
             component={ Goals }
           />
           <ProtectedRoute
             exact path='/activities'
-            user={ user }
+            loggedIn={ loggedIn }
             component={ Activities }
           />
           <ProtectedRoute
             exact path='/performance'
-            user={ user }
+            loggedIn={ loggedIn }
             component={ Performance }
           />
-          <ProtectedRoute
+          {/* <ProtectedRoute
             exact path='/support'
-            user={ user }
+            loggedIn={ loggedIn }
             component={ Support }
-          />
+          /> */}
 
           <Route path='/*'>
             <Error404 />
@@ -111,7 +117,7 @@ function App() {
 
         </Switch>
 
-        <Footer user={ user } />
+        <Footer loggedIn={ loggedIn } />
 
       </div >
     </Router >

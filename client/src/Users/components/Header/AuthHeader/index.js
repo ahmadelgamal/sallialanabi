@@ -71,7 +71,7 @@ function AuthHeader() {
             );
           }) }
 
-          <li className='nav-text'><Link onClick={ logout }><FaIcons.FaSignOutAlt /><span>Logout</span></Link></li>
+          <li className='nav-text'><Link to='#' onClick={ logout }><FaIcons.FaSignOutAlt /><span>Logout</span></Link></li>
         </ul>
       </nav>
 

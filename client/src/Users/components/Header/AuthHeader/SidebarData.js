@@ -27,18 +27,30 @@ export const SidebarData =
       icon: <FaIcons.FaChartLine />,
       className: 'nav-text'
     },
-    {
-      title: 'Support Group',
-      path: '/support',
-      icon: <FaIcons.FaUsers />,
-      className: 'nav-text'
-    },
+    // {
+    //   title: 'Support Group',
+    //   path: '/support',
+    //   icon: <FaIcons.FaUsers />,
+    //   className: 'nav-text'
+    // },
     {
       title: 'FAQs',
       path: '/faqs',
       icon: <FaIcons.FaQuestion />,
       className: 'nav-text'
     },
+    {
+      title: 'About',
+      path: '/about',
+      icon: <FaIcons.FaInfo />,
+      className: 'nav-text'
+    },
+    {
+      title: 'Contact',
+      path: '/contact',
+      icon: <FaIcons.FaRegEdit />,
+      className: 'nav-text'
+    }
     // {
     //   title: 'Logout',
     //   path: '/api/users/logout',
@@ -51,16 +63,4 @@ export const SidebarData =
     //   icon: <FaIcons.FaMosque />,
     //   className: 'nav-text'
     // },
-    // {
-    //   title: 'About',
-    //   path: '/about',
-    //   icon: <FaIcons.FaInfo />,
-    //   className: 'nav-text'
-    // },
-    // {
-    //   title: 'Contact',
-    //   path: '/contact',
-    //   icon: <FaIcons.FaRegEdit />,
-    //   className: 'nav-text'
-    // }
   ];

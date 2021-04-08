@@ -4,7 +4,10 @@ function Performance() {
 
   return (
     <main>
-      <h1>Track Performance</h1>
+      <section className="container">
+        <h1>Track Performance</h1>
+        <p>Coming soon, God willing.</p>
+      </section>
     </main>
   )
 };

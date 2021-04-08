@@ -1,10 +1,9 @@
 import AuthHeader from './AuthHeader';
 import UnAuthHeader from './UnAuthHeader';
 
-function Header(props) {
-  const isLoggedIn = props.user;
+function Header({ loggedIn }) {
 
-  if (isLoggedIn) {
+  if (loggedIn) {
     return <AuthHeader />;
   }
   return <UnAuthHeader />;

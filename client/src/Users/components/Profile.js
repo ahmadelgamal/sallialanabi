@@ -1,5 +1,4 @@
 function Profile() {
-
   document.title = 'Profile - Salli Ala Nabi';
 
   return (

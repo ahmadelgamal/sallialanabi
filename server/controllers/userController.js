@@ -38,19 +38,19 @@ exports.user_login = (req, res) => {
   User
     .findOne({ where: { email: req.body.email } })
     .then(dbUserData => {
-      if (!dbUserData) return res.status(401).json({ message: 'No user with that email address!' });
+      if (!dbUserData) return res.status(401).json({ message: 'Incorrect email!' });
 
       const validPassword = dbUserData.checkPassword(req.body.password);
 
       if (!validPassword) return res.status(401).json({ message: 'Incorrect password!' });
 
-      // console.log(dbUserData);
+      console.log(dbUserData);
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.email = dbUserData.email;
         req.session.loggedIn = true;
 
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
+        res.json({ user: dbUserData, message: 'You are logged in!' });
       });
     });
 };

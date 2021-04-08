@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-function ProtectedRoute({ component: Component, user, ...rest }) {
+function ProtectedRoute({ component: Component, loggedIn, ...rest }) {
   return (
     <Route { ...rest } render={
       props => {
-        if (user) {
+        if (loggedIn) {
           return <Component { ...rest } { ...props } />
         }
         else {

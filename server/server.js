@@ -12,17 +12,30 @@ const PORT = process.env.PORT || 4000;
 
 const sess = {
   secret: process.env.AUTH_SECRET,
-  cookie: { maxAge: 1000 * 60 * 60 * 24 },
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    // secure: NODE_ENV === 'production',
+    maxAge: 1000 * 60 * 60 * 24
+  },
   store: new SequelizeStore({
     db: sequelize
   })
 };
-app.use(session(sess));
+
+const corsObject = {
+  origin: ['http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+};
+
+app.disable('x-powered-by'); //hides stack to hackers
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors(corsObject));
+app.use(session(sess));
 app.use(routes);
 
 // serves up static assets
