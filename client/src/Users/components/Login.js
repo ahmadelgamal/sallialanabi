@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 // import Auth from '../../utils/auth';
 
-function Login({handleLogin}) {
+function Login({ handleLogin }) {
   document.title = 'Login - Salli Ala Nabi';
 
   // login form
@@ -50,7 +50,10 @@ function Login({handleLogin}) {
         setLoginErrorMessage(data.message);
         handleLogin();
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        setLoginErrorMessage(data.message);
+        console.error(err);
+      });
   };
 
   return (

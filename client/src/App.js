@@ -35,7 +35,6 @@ function App() {
   const handleLogin = () => {
     // e.preventDefault();
     setLoggedIn(true);
-    console.log(loggedIn);
   };
 
   const handleLogout = e => {
