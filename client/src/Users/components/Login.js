@@ -6,7 +6,7 @@ import Profile from './Profile';
 function Login(props) {
   document.title = 'Login - Salli Ala Nabi';
 
-  const { loggedIn, setLoggedIn, handleLogin } = props;
+  const { loggedIn, setLoggedIn } = props;
 
   // login form
   const [loginFormState, setLoginFormState] = useState(
@@ -59,55 +59,55 @@ function Login(props) {
   if (loggedIn) {
     return (
       <Profile />
+    );
+  } else {
+    return (
+      <main className='login'>
+        <section className="container">
+          <h1>Login</h1>
+          <form onSubmit={ handleLoginFormSubmit } className="login">
+            <label forhtml="loginEmail">Email:</label>
+            <br />
+            <input
+              onChange={ handleLoginFormChange }
+              type="text"
+              placeholder="Enter your email address"
+              autoComplete='email'
+              name="loginEmail"
+              required
+            />
+            <br />
+
+            <label forhtml="loginPassword">Password:</label>
+            <br />
+            <input
+              onChange={ handleLoginFormChange }
+              type="password"
+              placeholder="Enter password"
+              name="loginPassword"
+              autoComplete='current-password'
+              required
+            />
+            <br />
+
+            <label id='remember-id'>Remember me?</label>
+            <input
+              onClick={ handleLoginFormChange }
+              id='remember'
+              type="checkbox"
+              name="loginRememberMe"
+              defaultChecked={ loginFormState.loginRememberMe }
+            />
+            <button type="submit">Login</button>
+            <p className='errorMessages' id='loginErrorMessage'>
+              { loginErrorMessage }
+            </p>
+          </form>
+          <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
+        </section>
+      </main>
     )
   }
-
-  return (
-    <main className='login'>
-      <section className="container">
-        <h1>Login</h1>
-        <form onSubmit={ handleLoginFormSubmit } className="login">
-          <label forhtml="loginEmail">Email:</label>
-          <br />
-          <input
-            onChange={ handleLoginFormChange }
-            type="text"
-            placeholder="Enter your email address"
-            autoComplete='email'
-            name="loginEmail"
-            required
-          />
-          <br />
-
-          <label forhtml="loginPassword">Password:</label>
-          <br />
-          <input
-            onChange={ handleLoginFormChange }
-            type="password"
-            placeholder="Enter password"
-            name="loginPassword"
-            autoComplete='current-password'
-            required
-          />
-          <br />
-
-          <label id='remember-id'>Remember me?</label>
-          <input
-            onClick={ handleLoginFormChange }
-            id='remember'
-            type="checkbox"
-            name="loginRememberMe"
-            defaultChecked={ loginFormState.loginRememberMe }
-          />
-          <button type="submit">Login</button>
-          <p className='errorMessages' id='loginErrorMessage'>
-            { loginErrorMessage }
-          </p>
-        </form>
-        <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
-      </section>
-    </main>
-  )
 };
 
 export default Login;

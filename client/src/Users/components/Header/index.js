@@ -1,12 +1,19 @@
 import AuthHeader from './AuthHeader';
 import UnAuthHeader from './UnAuthHeader';
 
-function Header({ loggedIn }) {
+function Header(props) {
+  const { loggedIn, setLoggedIn } = props;
 
   if (loggedIn) {
-    return <AuthHeader />;
+    return <AuthHeader
+      logged={ loggedIn }
+      setLoggedIn={ setLoggedIn }
+    />;
   }
-  return <UnAuthHeader />;
+  return <UnAuthHeader
+    logged={ loggedIn }
+    setLoggedIn={ setLoggedIn }
+  />;
 };
 
 export default Header;

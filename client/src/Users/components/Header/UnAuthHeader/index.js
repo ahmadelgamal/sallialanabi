@@ -3,13 +3,16 @@ import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 import Logo from '../../../../assets/images/logo192.png';
+import AuthHeader from '../AuthHeader';
 
-function UnAuthHeader() {
+function UnAuthHeader(props) {
+  const { loggedIn } = props;
 
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(true);
   const hideSidebar = () => setSidebar(false);
 
+  if (loggedIn) return <AuthHeader />
   return (
     <header>
       <div className="navbar">

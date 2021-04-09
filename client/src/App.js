@@ -31,20 +31,13 @@ import Profile from './Users/components/Profile';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setLoggedIn(true);
-  };
-
-  const handleLogout = e => {
-    // e.preventDefault();
-    setLoggedIn(false);
-  };
-
   return (
     <Router>
       <div className="App">
 
-        <Header loggedIn={ loggedIn } handleLogout={ handleLogout } />
+        <Header
+          loggedIn={ loggedIn }
+          setLoggedIn={ setLoggedIn } />
 
         <Switch>
 
@@ -53,7 +46,8 @@ function App() {
             component={ () =>
               <Login
                 loggedIn={ loggedIn }
-                setLoggedIn={ setLoggedIn } />
+                setLoggedIn={ setLoggedIn }
+              />
             } />
 
           <Route
@@ -61,7 +55,8 @@ function App() {
             component={ () =>
               <Login
                 loggedIn={ loggedIn }
-                setLoggedIn={ setLoggedIn } />
+                setLoggedIn={ setLoggedIn }
+              />
             } />
 
           <Route exact path='/register'>
@@ -82,27 +77,24 @@ function App() {
 
           <ProtectedRoute
             exact path='/profile'
-            loggedIn={ loggedIn }
             component={ Profile }
           />
           <ProtectedRoute
             exact path='/goals'
-            loggedIn={ loggedIn }
             component={ Goals }
           />
           <ProtectedRoute
             exact path='/activities'
-            loggedIn={ loggedIn }
             component={ Activities }
+            loggedIn={ loggedIn }
+            setLoggedIn={ setLoggedIn }
           />
           <ProtectedRoute
             exact path='/performance'
-            loggedIn={ loggedIn }
             component={ Performance }
           />
           {/* <ProtectedRoute
             exact path='/support'
-            loggedIn={ loggedIn }
             component={ Support }
           /> */}
 

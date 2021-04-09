@@ -3,8 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 import Logo from '../../../../assets/images/logo192.png';
+import UnAuthHeader from '../UnAuthHeader';
 
-function AuthHeader() {
+function AuthHeader(props) {
+
+  const { loggedIn, setLoggedIn } = props;
 
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(true);
@@ -16,13 +19,20 @@ function AuthHeader() {
       headers: { 'Content-Type': 'application/json' }
     })
       .then((response) => {
-        if (response.status === 204) console.log('Logged out successfully!');
+        if (response.status === 204) {
+          setLoggedIn(false);
+          console.log('Logged out successfully!');
+        }
         else console.log('Error logging out. You are probably not logged in to begin with!');
-        window.location = '/';
+        // window.location = '/';
       })
       .catch(err => console.error(err));
   }
 
+  if(!loggedIn) {
+    return <UnAuthHeader />;
+  }
+  
   return (
     <header>
       <div className="navbar">
