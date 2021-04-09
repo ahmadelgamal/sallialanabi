@@ -50,10 +50,7 @@ function Login({ handleLogin }) {
         setLoginErrorMessage(data.message);
         handleLogin();
       })
-      .catch(err => {
-        setLoginErrorMessage(data.message);
-        console.error(err);
-      });
+      .catch(err => console.error(err));
   };
 
   return (
