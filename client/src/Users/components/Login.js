@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
+import Profile from './Profile';
 // import Auth from '../../utils/auth';
 
-function Login({ handleLogin }) {
+function Login(props) {
   document.title = 'Login - Salli Ala Nabi';
+
+  const { loggedIn, setLoggedIn, handleLogin } = props;
 
   // login form
   const [loginFormState, setLoginFormState] = useState(
@@ -48,10 +51,16 @@ function Login({ handleLogin }) {
       })
       .then(data => {
         setLoginErrorMessage(data.message);
-        handleLogin();
+        setLoggedIn(true);
       })
       .catch(err => console.error(err));
   };
+
+  if (loggedIn) {
+    return (
+      <Profile />
+    )
+  }
 
   return (
     <main className='login'>

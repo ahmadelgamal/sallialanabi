@@ -22,7 +22,6 @@ import Contact from './Users/components/Contact';
 import FAQs from './Users/components/FAQs';
 
 import ProtectedRoute from './Users/components/ProtectedRoute';
-import Dashboard from './Users/components/Dashboard';
 import Activities from './Users/components/Activities';
 import Goals from './Users/components/Goals';
 import Performance from './Users/components/Performance';
@@ -33,12 +32,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    // e.preventDefault();
     setLoggedIn(true);
   };
 
   const handleLogout = e => {
-    e.preventDefault();
+    // e.preventDefault();
     setLoggedIn(false);
   };
 
@@ -53,13 +51,17 @@ function App() {
           <Route
             exact path='/'
             component={ () =>
-              <Login loggedIn={ loggedIn } handleLogin={ handleLogin } />
+              <Login
+                loggedIn={ loggedIn }
+                setLoggedIn={ setLoggedIn } />
             } />
 
           <Route
             exact path='/login'
             component={ () =>
-              <Login loggedIn={ loggedIn } handleLogin={ handleLogin } />
+              <Login
+                loggedIn={ loggedIn }
+                setLoggedIn={ setLoggedIn } />
             } />
 
           <Route exact path='/register'>
@@ -78,12 +80,6 @@ function App() {
             <FAQs />
           </Route>
 
-          <ProtectedRoute
-            exact path='/dashboard'
-            loggedIn={ loggedIn }
-            handleLogout={ handleLogout }
-            component={ Dashboard }
-          />
           <ProtectedRoute
             exact path='/profile'
             loggedIn={ loggedIn }
