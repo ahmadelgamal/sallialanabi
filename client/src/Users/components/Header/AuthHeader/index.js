@@ -3,28 +3,35 @@ import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 import Logo from '../../../../assets/images/logo192.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../../../redux/ducks/isLoggedIn';
 import UnAuthHeader from '../UnAuthHeader';
 
-function AuthHeader(props) {
+function AuthHeader() {
 
-  const { loggedIn, setLoggedIn } = props;
+  const loggedIn = useSelector((state) => state.isLoggedIn.loggedIn);
+  const dispatch = useDispatch();
 
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+  
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(true);
   const hideSidebar = () => setSidebar(false);
-
-  function logout() {
+  
+  function navLogout(e) {
+    e.preventDefault();
     fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     })
       .then((response) => {
         if (response.status === 204) {
-          setLoggedIn(false);
+          handleLogout();
           console.log('Logged out successfully!');
         }
         else console.log('Error logging out. You are probably not logged in to begin with!');
-        // window.location = '/';
       })
       .catch(err => console.error(err));
   }
@@ -81,7 +88,7 @@ function AuthHeader(props) {
             );
           }) }
 
-          <li className='nav-text'><Link to='#' onClick={ logout }><FaIcons.FaSignOutAlt /><span>Logout</span></Link></li>
+          <li className='nav-text'><Link to='#' onClick={ navLogout }><FaIcons.FaSignOutAlt /><span>Logout</span></Link></li>
         </ul>
       </nav>
 

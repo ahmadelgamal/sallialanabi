@@ -1,16 +1,8 @@
-import Login from './Login';
 import * as FaIcons from 'react-icons/fa';
 
-function Activities(props) {
+function Activities() {
 
   document.title = 'Record Activities - Salli Ala Nabi';
-
-  const { loggedIn, setLoggedIn } = props;
-  if (!loggedIn) {
-    return (
-      <Login />
-    );
-  }
 
   return (
     <main className='activities ramadan'>

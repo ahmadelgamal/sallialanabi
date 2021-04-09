@@ -2,11 +2,18 @@ import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import Profile from './Profile';
 // import Auth from '../../utils/auth';
+import { useSelector, useDispatch } from 'react-redux';
+import { login } from '../../redux/ducks/isLoggedIn';
 
-function Login(props) {
+function Login() {
   document.title = 'Login - Salli Ala Nabi';
 
-  const { loggedIn, setLoggedIn } = props;
+  const loggedIn = useSelector((state) => state.isLoggedIn.loggedIn);
+  const dispatch = useDispatch();
+
+  const handleLogin = () => {
+    dispatch(login());
+  };
 
   // login form
   const [loginFormState, setLoginFormState] = useState(
@@ -51,7 +58,7 @@ function Login(props) {
       })
       .then(data => {
         setLoginErrorMessage(data.message);
-        setLoggedIn(true);
+        handleLogin();
       })
       .catch(err => console.error(err));
   };

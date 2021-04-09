@@ -1,19 +1,14 @@
 import AuthHeader from './AuthHeader';
 import UnAuthHeader from './UnAuthHeader';
+import { useSelector } from 'react-redux';
 
-function Header(props) {
-  const { loggedIn, setLoggedIn } = props;
+function Header() {
+  const loggedIn = useSelector((state) => state.isLoggedIn.loggedIn);
 
   if (loggedIn) {
-    return <AuthHeader
-      logged={ loggedIn }
-      setLoggedIn={ setLoggedIn }
-    />;
+    return <AuthHeader />;
   }
-  return <UnAuthHeader
-    logged={ loggedIn }
-    setLoggedIn={ setLoggedIn }
-  />;
+  return <UnAuthHeader />;
 };
 
 export default Header;

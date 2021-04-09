@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import './App.css';
 import './header.css';
 import './main.css';
@@ -29,35 +27,23 @@ import Profile from './Users/components/Profile';
 // import Support from './Users/components/Support';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
   return (
     <Router>
       <div className="App">
 
-        <Header
-          loggedIn={ loggedIn }
-          setLoggedIn={ setLoggedIn } />
+        <Header />
 
         <Switch>
 
           <Route
             exact path='/'
-            component={ () =>
-              <Login
-                loggedIn={ loggedIn }
-                setLoggedIn={ setLoggedIn }
-              />
-            } />
+            component={ () => <Login /> }
+          />
 
           <Route
             exact path='/login'
-            component={ () =>
-              <Login
-                loggedIn={ loggedIn }
-                setLoggedIn={ setLoggedIn }
-              />
-            } />
+            component={ () => <Login /> }
+          />
 
           <Route exact path='/register'>
             <Register />
@@ -86,8 +72,6 @@ function App() {
           <ProtectedRoute
             exact path='/activities'
             component={ Activities }
-            loggedIn={ loggedIn }
-            setLoggedIn={ setLoggedIn }
           />
           <ProtectedRoute
             exact path='/performance'
@@ -104,7 +88,7 @@ function App() {
 
         </Switch>
 
-        <Footer loggedIn={ loggedIn } />
+        <Footer />
 
       </div >
     </Router >

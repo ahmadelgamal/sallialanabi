@@ -1,7 +1,10 @@
 import AuthFooter from './AuthFooter';
 import UnAuthFooter from './UnAuthFooter';
+import { useSelector } from 'react-redux';
 
-function Footer({loggedIn}) {
+function Footer({}) {
+  const loggedIn = useSelector((state) => state.isLoggedIn.loggedIn);
+
   if (loggedIn) {
     return <AuthFooter />;
   }
