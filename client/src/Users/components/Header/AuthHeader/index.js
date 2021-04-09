@@ -27,7 +27,7 @@ function AuthHeader() {
       .then((response) => {
         if (response.status === 204) {
           handleLogout();
-          console.log('Logged out successfully!');
+          // console.log('Logged out successfully!');
         }
         else console.log('Error logging out. You are probably not logged in to begin with!');
       })
