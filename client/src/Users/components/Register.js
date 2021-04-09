@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { NavLink } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import { validateEmail } from '../../utils/helpers';
 // import Auth from '../../utils/auth';
+import React from "react";
 
 function Register() {
 
   document.title = 'Register - Salli Ala Nabi';
+
+  const [registerStatus, setRegisterStatus] = useState(false);
 
   // register form
   const [registerFormState, setRegisterFormState] = useState(
@@ -59,7 +62,10 @@ function Register() {
             .then(response => {
               if (response.ok) {
                 setRegisterErrorMessage('You have registered successfully!');
-                setTimeout(() => setRegisterErrorMessage(''), 3000);
+                setTimeout(() => {
+                  setRegisterErrorMessage('');
+                  setRegisterStatus(true);
+                }, 1000);
               }
               else setRegisterErrorMessage('User already exists!');
             })
@@ -71,7 +77,8 @@ function Register() {
     }
   };
 
-  return (
+  if (registerStatus) return <Redirect to='/login' />;
+  else return (
     <main className='register'>
       <section className="container">
         <h1>Register</h1>

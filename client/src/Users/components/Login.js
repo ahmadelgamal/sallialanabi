@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { NavLink } from 'react-router-dom';
-import Profile from './Profile';
+import { Redirect, NavLink } from 'react-router-dom';
 // import Auth from '../../utils/auth';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../../redux/ducks/isLoggedIn';
@@ -63,58 +62,53 @@ function Login() {
       .catch(err => console.error(err));
   };
 
-  if (loggedIn) {
-    return (
-      <Profile />
-    );
-  } else {
-    return (
-      <main className='login'>
-        <section className="container">
-          <h1>Login</h1>
-          <form onSubmit={ handleLoginFormSubmit } className="login">
-            <label forhtml="loginEmail">Email:</label>
-            <br />
-            <input
-              onChange={ handleLoginFormChange }
-              type="text"
-              placeholder="Enter your email address"
-              autoComplete='email'
-              name="loginEmail"
-              required
-            />
-            <br />
+  if (loggedIn) return <Redirect to='/profile' />;
+  else return (
+    <main className='login'>
+      <section className="container">
+        <h1>Login</h1>
+        <form onSubmit={ handleLoginFormSubmit } className="login">
+          <label forhtml="loginEmail">Email:</label>
+          <br />
+          <input
+            onChange={ handleLoginFormChange }
+            type="text"
+            placeholder="Enter your email address"
+            autoComplete='email'
+            name="loginEmail"
+            required
+          />
+          <br />
 
-            <label forhtml="loginPassword">Password:</label>
-            <br />
-            <input
-              onChange={ handleLoginFormChange }
-              type="password"
-              placeholder="Enter password"
-              name="loginPassword"
-              autoComplete='current-password'
-              required
-            />
-            <br />
+          <label forhtml="loginPassword">Password:</label>
+          <br />
+          <input
+            onChange={ handleLoginFormChange }
+            type="password"
+            placeholder="Enter password"
+            name="loginPassword"
+            autoComplete='current-password'
+            required
+          />
+          <br />
 
-            <label id='remember-id'>Remember me?</label>
-            <input
-              onClick={ handleLoginFormChange }
-              id='remember'
-              type="checkbox"
-              name="loginRememberMe"
-              defaultChecked={ loginFormState.loginRememberMe }
-            />
-            <button type="submit">Login</button>
-            <p className='errorMessages' id='loginErrorMessage'>
-              { loginErrorMessage }
-            </p>
-          </form>
-          <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
-        </section>
-      </main>
-    )
-  }
+          <label id='remember-id'>Remember me?</label>
+          <input
+            onClick={ handleLoginFormChange }
+            id='remember'
+            type="checkbox"
+            name="loginRememberMe"
+            defaultChecked={ loginFormState.loginRememberMe }
+          />
+          <button type="submit">Login</button>
+          <p className='errorMessages' id='loginErrorMessage'>
+            { loginErrorMessage }
+          </p>
+        </form>
+        <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
+      </section>
+    </main>
+  )
 };
 
 export default Login;

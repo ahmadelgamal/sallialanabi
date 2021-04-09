@@ -5,8 +5,8 @@ function Goals() {
   return (
     <main>
       <section className="container">
-      <h1>Set Goals</h1>
-      <p>This is a premium feature. It is not available in this free version.</p>
+        <h1>Set Goals</h1>
+        <p>This is a premium feature. It is currently not available.</p>
       </section>
     </main>
   )
