@@ -127,7 +127,7 @@ function Register() {
             { registerErrorMessage }
           </p>
         </form>
-        <h3>Already have an account? <NavLink to='/login'>Login</NavLink></h3>
+        <h3>Already have an account? <NavLink to='/login'>Login</NavLink></h3>
       </section>
     </main>
   )

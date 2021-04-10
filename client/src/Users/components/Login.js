@@ -92,7 +92,7 @@ function Login() {
           />
           <br />
 
-          <label id='remember-id'>Remember me?</label>
+          <label id='remember-id'>Remember me?</label>
           <input
             onClick={ handleLoginFormChange }
             id='remember'
@@ -105,7 +105,7 @@ function Login() {
             { loginErrorMessage }
           </p>
         </form>
-        <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
+        <h3>Don't have an account? <NavLink to='/register'>Register now!</NavLink></h3>
       </section>
     </main>
   )
